@@ -10,8 +10,6 @@ public class MapGen : MonoBehaviour
 
 
 
-    [Range(0, 1)]
-    public float tileOutline;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +19,7 @@ public class MapGen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GenrateMap();
 
     }
 
@@ -50,9 +49,7 @@ public class MapGen : MonoBehaviour
                 Vector3 tilepos = new Vector3(-mapsize.x / 2 + 0.5f + x, 0, -mapsize.y/2 + 0.5f + y);
                 Transform newTiles = Instantiate(tilePrefab , tilepos , Quaternion.Euler(Vector3.right*90)) as Transform;
 
-                // controls tile outline
-                newTiles.localScale = Vector3.one * (1 - tileOutline);
-                newTiles.parent = mapholder;
+          
             }
 
         }

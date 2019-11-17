@@ -2,18 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-[CustomEditor (typeof (MapGen))]
-public class MapEditor : Editor
+public class MapEditor : MonoBehaviour
 {
-
-
-    public override void OnInspectorGUI()
+    [MenuItem("Tools/assign tile Mat")]
+    public static void AssignTileMat()
     {
-        base.OnInspectorGUI();
-        MapGen map = target as MapGen;
-        map.GenrateMap();
+        GameObject[] tile = GameObject.FindGameObjectsWithTag("tile");
+        Material material = Resources.Load<Material>("tile");
+
+
+
+        foreach(GameObject t in tile)
+        {
+            t.GetComponent<Renderer>().material = material;
+
+        }
+
+
+
     }
-    
     // Start is called before the first frame update
     void Start()
     {

@@ -9,7 +9,8 @@ public class MapGen : MonoBehaviour
     public Vector3 mapsize;
 
 
-
+    [Range(0, 1)]
+    public float outlinePercent;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class MapGen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GenrateMap();
+    
 
     }
 
@@ -31,7 +32,7 @@ public class MapGen : MonoBehaviour
             for (int y = 0; y < mapsize.y; y++)
             {
                 string mapcontrol = "GenrateMap";
-                
+
                 //if string is true it will destory tile 
                 if (transform.Find(mapcontrol))
                 {
@@ -48,8 +49,9 @@ public class MapGen : MonoBehaviour
                 //creates clones of tiles to change size of maps tile in x,y,z
                 Vector3 tilepos = new Vector3(-mapsize.x / 2 + 0.5f + x, 0, -mapsize.y/2 + 0.5f + y);
                 Transform newTiles = Instantiate(tilePrefab , tilepos , Quaternion.Euler(Vector3.right*90)) as Transform;
+                newTiles.localScale = Vector3.one * (1 - outlinePercent);
+                newTiles.parent = mapholder;
 
-          
             }
 
         }

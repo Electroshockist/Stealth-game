@@ -23,7 +23,7 @@ public class Menu : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        QuitMenu = QuitMenu.GetComponent<Canvas>();
+        //QuitMenu = QuitMenu.GetComponent<Canvas>();
         OptionsMenu = OptionsMenu.GetComponent<Canvas>();
 
         startText = startText.GetComponent<Button>();

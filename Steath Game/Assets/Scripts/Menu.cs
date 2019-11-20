@@ -24,15 +24,15 @@ public class Menu : MonoBehaviour
     void Start()
     {
         //QuitMenu = QuitMenu.GetComponent<Canvas>();
-        OptionsMenu = OptionsMenu.GetComponent<Canvas>();
+       // OptionsMenu = OptionsMenu.GetComponent<Canvas>();
 
         startText = startText.GetComponent<Button>();
         exitText = exitText.GetComponent<Button>();
-        OptionsText = OptionsText.GetComponent<Button>();
-        CreditText = CreditText.GetComponent<Button>();
+       // OptionsText = OptionsText.GetComponent<Button>();
+       // CreditText = CreditText.GetComponent<Button>();
 
-        QuitMenu.enabled = false;
-        OptionsMenu.enabled = false;
+      //  QuitMenu.enabled = false;
+       // OptionsMenu.enabled = false;
 
     }
 

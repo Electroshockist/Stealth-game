@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - tile
+  - Item
+  - Case
   layers:
   - Default
   - TransparentFX

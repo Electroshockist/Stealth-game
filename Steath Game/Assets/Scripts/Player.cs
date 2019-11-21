@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     Vector3 movDirection = Vector3.zero;
 
 
-    public Text winText;
+    //public Text winText;
     public Text Playerhealthtext;
     public Text Briefcasetext;
     public Text itemText;
@@ -87,9 +87,23 @@ public class Player : MonoBehaviour
         {
             anim.Play("walk", -1, 0f);
             // anim.Play("WAIT00", -1, 0f);
-            anim.SetTrigger("run");
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                anim.SetTrigger("run");
+            }
 
 
+            if (Input.GetKey(KeyCode.RightShift))
+            {
+                anim.SetBool("crouch",true);
+
+            }
+            else
+            {
+                anim.SetBool("crouch", false);
+
+            }
         }
 
 
@@ -193,8 +207,8 @@ public class Player : MonoBehaviour
     void SetCountText()
     {
        
-        Playerhealthtext.text = "Life Count " + health + "/3";
-        Briefcasetext.text = "Power " + Briefcase + "/3";
+        Playerhealthtext.text = "Health" + health + "/3";
+        Briefcasetext.text = " Briefcase " + Briefcase + "/3";
         itemText.text = "Item" + item + "/3";
         //winText.text = "YOU WIN";
         // Debug.Log(count.ToString());
@@ -253,6 +267,9 @@ public class Player : MonoBehaviour
             }
 
         }
+
+
+
 
 
         if (other.gameObject.CompareTag("Enemy"))

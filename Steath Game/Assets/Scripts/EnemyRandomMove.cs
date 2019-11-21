@@ -12,8 +12,6 @@ public class EnemyRandomMove : MonoBehaviour
     public int totalenemy = 10;
     public GameObject[] pickups;
     public GameObject player;
-    public GameObject deathwatch;
-    public Transform Campos;
     public int enemyhealth = 1;
     public Transform eyes;
     private NavMeshAgent agent;

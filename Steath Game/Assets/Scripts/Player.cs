@@ -282,10 +282,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-    }
+   
 
     private void OnTriggerEnter(Collider other)
     {
@@ -318,6 +315,15 @@ public class Player : MonoBehaviour
             SetCountText();
 
             
+        }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+     
+            health -= 1;
+            SetCountText();
+
+
         }
 
     }

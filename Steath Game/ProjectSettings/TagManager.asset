@@ -7,6 +7,9 @@ TagManager:
   - tile
   - Item
   - Case
+  - itemMach
+  - gun
+  - Enemy
   layers:
   - Default
   - TransparentFX

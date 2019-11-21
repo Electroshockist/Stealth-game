@@ -25,13 +25,17 @@ public class Player : MonoBehaviour
 
     //player health
     public int health = 3;
+    //public int curhealth = health;
 
+
+    public GameObject[] pickups;
+    //public GameObject[] spawningPoints;
+    public Transform[] spawnPointsTransform;
 
 
 
 
     //game objects 
-
     public int Briefcase = 0;
     public int item = 0;
 
@@ -80,6 +84,29 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             sMoveType = !sMoveType;
+        }
+
+
+
+        if (health>=3)
+        {
+            health = 3;
+            SetCountText();
+
+        }
+
+
+        if (item >= 3)
+        {
+            item = 3;
+            SetCountText();
+        }
+
+
+        if (Briefcase >= 3)
+        {
+            Briefcase = 3;
+            SetCountText();
         }
 
         //animate
@@ -133,6 +160,14 @@ public class Player : MonoBehaviour
         }
 
 
+
+        if (Input.GetKeyDown("u") && item > 0)
+        {
+
+            item = item - 1;
+            health = health + 1;
+            SetCountText();
+        }
 
 
 
@@ -228,7 +263,29 @@ public class Player : MonoBehaviour
 
     }
 
+    private void OnTriggerStay(Collider other)
+    {
 
+        if (Input.GetKeyDown("y") &&  other.gameObject.CompareTag("itemMach"))
+        {
+
+            Debug.Log("hit");
+            int randomDrop = Random.Range(0, 4);
+            int randomPickup = Random.Range(0, pickups.Length -1);
+
+            if (randomDrop < 4)
+            {
+                Debug.Log("drop");
+                Instantiate(pickups[randomPickup], spawnPointsTransform[randomPickup].position, spawnPointsTransform[randomPickup].rotation);
+
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -253,35 +310,16 @@ public class Player : MonoBehaviour
         }
 
 
+
         if (other.gameObject.CompareTag("Item"))
         {
             other.gameObject.SetActive(false);
             item = item + 1;
             SetCountText();
 
-            if (Input.GetKeyDown("u"))
-            {
-
-                item = item - 1;
-                health = health + 1;
-            }
-
+            
         }
 
-
-
-
-
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-
-            health = health - 1;
-            //other.gameObject.SetActive(false);
-            //currenthealth = health - 1;
-            SetCountText();
-            Debug.Log(health);
-
-        }
     }
 
     void Fire()

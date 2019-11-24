@@ -25,11 +25,9 @@ public class Player : MonoBehaviour
 
     //player health
     public int health = 3;
-    //public int curhealth = health;
 
 
     public GameObject[] pickups;
-    //public GameObject[] spawningPoints;
     public Transform[] spawnPointsTransform;
 
 
@@ -252,10 +250,11 @@ public class Player : MonoBehaviour
         // if health equal to 0 player is dead 
         if (health <= 0)
         {
+   
             anim.SetTrigger("Dead");
             // end game texEt
             Playerhealthtext.text = "your dead";
-            alive = false;
+             alive = false;
             // Reset();
         }
 
@@ -280,15 +279,30 @@ public class Player : MonoBehaviour
 
             }
         }
+
+
+     
     }
 
-   
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "eyes")
+        {
+            other.transform.parent.GetComponent<EnemyRandomMove>().CheckPlayerinsight();
+
+            Debug.Log("sees you ");
+        }
+
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "eyes")
         {
             other.transform.parent.GetComponent<EnemyRandomMove>().CheckPlayerinsight();
+          
+            Debug.Log("sees you ");
         }
 
 

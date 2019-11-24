@@ -17,11 +17,9 @@ public class EnemyRandomMove : MonoBehaviour
     private NavMeshAgent agent;
     static Animator animate;
     private string state = "idle";
-    private bool alive = true;
     private float wait = 0f;
     private bool alert = false;
     private float awareness = 20f;
-    public Vector3 offset = new Vector3(5f, 0f, 0f);
 
     void Start()
     {
@@ -35,19 +33,21 @@ public class EnemyRandomMove : MonoBehaviour
     // this makes sure that the player is seen by enemy 
     public void CheckPlayerinsight()
     {
-        if (alive)
-        {
+        if (player.GetComponent<Player>().alive)
+            {
             RaycastHit rayHit;
             if (Physics.Linecast(eyes.position, player.transform.position, out rayHit))
             {
                 // print("hit" + rayHit.collider.gameObject.name);
-                if (rayHit.collider.gameObject.name == "unitychan")
+                if (rayHit.collider.gameObject.tag == "Player")
                 {
+
                     if (state != "kill")
                     {
                         state = "chase";
-                        agent.speed = 15.5f;
-                        // animate.speed = 3.5f;
+                        Debug.Log("chase");
+                        agent.speed = 10.5f;
+                        animate.speed = 3.5f;
 
                     }
                 }
@@ -80,19 +80,17 @@ public class EnemyRandomMove : MonoBehaviour
         ///  Debug.DrawLine(eyes.position, player.transform.position, Color.green);
         if (enemyhealth <= 0)
         {
-            animate.SetTrigger("Dead");
-            //enemy is dead 
-
             death();
         }
 
-        if (alive)
+        if (player.GetComponent<Player>().alive)
         {
             animate.SetFloat("velocity", agent.velocity.magnitude);
 
             //Idle
             if (state == "idle")
             {
+                Debug.Log(state);
                 //walk randomly within 20f;
                 Vector3 randomPos = Random.insideUnitSphere * awareness;
                 NavMeshHit navHit;
@@ -100,18 +98,21 @@ public class EnemyRandomMove : MonoBehaviour
                 /// enemy finds random place wiith 20f to walk around on nav mesh 
                 NavMesh.SamplePosition(transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
 
-                // if enemy is alerted it will follow player tracks 
+                // if enemy is alerted it will follow player tracks  (Breadcrumb)
                 if (alert)
                 {
                     NavMesh.SamplePosition(player.transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
 
                     awareness += 5f;
+                    Debug.Log("awareness::" + awareness);
                     //enemy awares wil lower over time 
                     if (awareness > 20f)
                     {
                         alert = false;
                         agent.speed = 10.2f;
                         animate.speed = 1.2f;
+                        agent.SetDestination(navHit.position);
+                        Debug.Log("im alert");
                     }
                 }
                 agent.SetDestination(navHit.position);
@@ -125,6 +126,7 @@ public class EnemyRandomMove : MonoBehaviour
                 {
                     state = "search";
                     wait = 5f;
+                    Debug.Log("search");
 
                 }
             }
@@ -145,61 +147,131 @@ public class EnemyRandomMove : MonoBehaviour
             }
 
 
+
+
+
+
             //Chase
             if (state == "chase")
             {
-
-                agent.destination = player.transform.position;
+                agent.SetDestination(player.transform.position);
 
                 // enemy loses player
                 float distance = Vector3.Distance(transform.position, player.transform.position);
-                if (distance > 10f)
+                print("Distance to other: " + distance);
+
+                //search
+                if (distance > 1f)
                 {
                     state = "somethingwrong";
+                    Debug.Log("somethingwrong");
                 }
 
-                //kill the player
-                else if (agent.remainingDistance <= agent.stoppingDistance + 15f && !agent.pathPending)
+              else  if (distance< 1)
+                {
+                    //if player is alive kill them
+                    if (player.GetComponent<Player>().alive)
+                    {
+
+                        state = "kill";
+                        Debug.Log("kill");
+                    }
+
+                }
+
+                if (enemyhealth < 2)
                 {
 
-                    //if player is alive kill them
-                    //if (player.GetComponent<realCharacter>().alive)
-                    //{
-
-                    //    state = "kill";
-                    //    player.GetComponent<realCharacter>().alive = false;
-
-                    //}
+                    state = "Run";
 
                 }
+         
             }
 
-            //some thing is wrong look around
-            if (state == "somethingwrong")
+
+
+
+            //edavde
+            if (state == "Run")
+            {
+                Vector3 enemypos = transform.position;
+                float distance = Vector3.Distance(transform.position, player.transform.position);
+                print("Distance to other: " + distance);
+               Vector3 enemyMove = Vector3.zero;
+
+                if (distance > 1f)
+                {
+                    if (enemypos.x > player.transform.position.x)
+                    {
+                        enemyMove.x *= 6;
+                    }
+
+
+                    if (enemypos.z > player.transform.position.z)
+                    {
+                        enemyMove.z *= 6;
+                    }
+                }
+
+                enemypos += enemyMove;
+
+            }
+
+                //some thing is wrong look around
+                if (state == "somethingwrong")
             {
                 if (agent.remainingDistance <= agent.stoppingDistance && !agent.pathPending)
                 {
 
                     state = "search";
+                   
                     wait = 5f;
                     alert = true;
                     awareness = 5f;
+                ;
                     CheckPlayerinsight();
 
                 }
             }
 
+
             // will try to kill player 
             if (state == "kill")
             {
-                animate.SetBool("isAttacking", true);
-                animate.SetBool("isWalking", false);
 
-                animate.speed = 1f;
                 agent.SetDestination(player.transform.position);
 
+                animate.SetBool("isAttacking", true);
+                animate.SetBool("isWalking",false);
+
+                animate.speed = 1f;
+                
+                
+                // enemy loses player
+                float distance = Vector3.Distance(transform.position, player.transform.position);
+                print("Distance to other: " + distance);
+
+                //search
+                if (distance > 12f)
+                {
+                    state = "somethingwrong";
+                    Debug.Log("somethingwrong");
+                }
+
+                else if (distance < 12)
+                {
+                    //if player is alive kill them
+                    if (player.GetComponent<Player>().alive)
+                    {
+
+                        state = "kill";
+                        Debug.Log("kill");
+                    }
+
+                }
+
             }
-            else
+            else 
             {
                 animate.SetBool("isAttacking", false);
             }
@@ -213,17 +285,6 @@ public class EnemyRandomMove : MonoBehaviour
 
 
         agent.gameObject.SetActive(false);
-
-
-        /// enemy will drop items random when dead 
-        int randomDrop = Random.Range(0, 2);
-        int randomPickup = Random.Range(0, pickups.Length - 1);
-        if (randomDrop < 2)
-        {
-            Instantiate(pickups[randomPickup], transform.position
-           + new Vector3(0, 0.25f, 0), Quaternion.Euler(0, 0, 0));
-        }
-
 
         enemy.Remove(gameObject);
 

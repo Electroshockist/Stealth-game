@@ -85,8 +85,7 @@ public class Player : MonoBehaviour
         }
 
 
-
-        if (health>=3)
+            if (health>=3)
         {
             health = 3;
             SetCountText();
@@ -112,26 +111,32 @@ public class Player : MonoBehaviour
         {
             anim.Play("walk", -1, 0f);
             // anim.Play("WAIT00", -1, 0f);
+        
+        }
 
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                anim.SetTrigger("run");
-            }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            anim.SetBool("crouch", true);
 
+        }
+        else
+        {
+            anim.SetBool("crouch", false);
 
-            if (Input.GetKey(KeyCode.RightShift))
-            {
-                anim.SetBool("crouch",true);
-
-            }
-            else
-            {
-                anim.SetBool("crouch", false);
-
-            }
         }
 
 
+        if (Input.GetKey(KeyCode.E))
+        {
+
+            anim.SetBool("run", true);
+
+        }
+        else
+        {
+            anim.SetBool("run", false);
+
+        }
 
         if (Input.GetKey(KeyCode.J))
         {
@@ -149,6 +154,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
+
             anim.SetBool("Jump", true);
         }
         else
@@ -166,12 +172,6 @@ public class Player : MonoBehaviour
             health = health + 1;
             SetCountText();
         }
-
-
-
-
-
-
 
 
         if (sMoveType)
@@ -224,7 +224,7 @@ public class Player : MonoBehaviour
         inputV = Input.GetAxis("Vertical");
         anim.SetFloat("inputH", inputH);
         anim.SetFloat("inputV", inputV);
-
+       
         if (Input.GetKeyDown(KeyCode.J))
         {
 
@@ -251,7 +251,7 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
    
-            anim.SetTrigger("Dead");
+            anim.SetTrigger("Death");
             // end game texEt
             Playerhealthtext.text = "your dead";
              alive = false;

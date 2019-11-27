@@ -99,6 +99,7 @@ public class EnemyRandomMove : MonoBehaviour
                 /// enemy finds random place wiith 20f to walk around on nav mesh 
                 NavMesh.SamplePosition(transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
 
+
                 // if enemy is alerted it will follow player tracks  (Breadcrumb)
                 if (alert)
                 {

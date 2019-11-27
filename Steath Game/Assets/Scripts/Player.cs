@@ -265,12 +265,12 @@ public class Player : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
 
-        if (Input.GetKeyDown("y") &&  other.gameObject.CompareTag("itemMach"))
+        if (Input.GetKeyUp("y") && other.gameObject.CompareTag("itemMach"))
         {
 
             Debug.Log("hit");
-            int randomDrop = Random.Range(0, 4);
-            int randomPickup = Random.Range(0, pickups.Length -1);
+            int randomDrop = Random.Range(0, 3);
+            int randomPickup = Random.Range(0, pickups.Length - 1);
 
             if (randomDrop < 4)
             {
@@ -281,7 +281,7 @@ public class Player : MonoBehaviour
         }
 
 
-     
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -304,6 +304,8 @@ public class Player : MonoBehaviour
           
             Debug.Log("sees you ");
         }
+
+   
 
 
         // ..and if the game object we intersect has the tag 'Pick Up' assigned to it..

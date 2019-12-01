@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Player : MonoBehaviour
@@ -25,11 +24,9 @@ public class Player : MonoBehaviour
 
     //player health
     public int health = 3;
-    //public int curhealth = health;
 
 
     public GameObject[] pickups;
-    //public GameObject[] spawningPoints;
     public Transform[] spawnPointsTransform;
 
 
@@ -87,8 +84,7 @@ public class Player : MonoBehaviour
         }
 
 
-
-        if (health>=3)
+            if (health>=3)
         {
             health = 3;
             SetCountText();
@@ -114,26 +110,32 @@ public class Player : MonoBehaviour
         {
             anim.Play("walk", -1, 0f);
             // anim.Play("WAIT00", -1, 0f);
+        
+        }
 
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                anim.SetTrigger("run");
-            }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            anim.SetBool("crouch", true);
 
+        }
+        else
+        {
+            anim.SetBool("crouch", false);
 
-            if (Input.GetKey(KeyCode.RightShift))
-            {
-                anim.SetBool("crouch",true);
-
-            }
-            else
-            {
-                anim.SetBool("crouch", false);
-
-            }
         }
 
 
+        if (Input.GetKey(KeyCode.E))
+        {
+
+            anim.SetBool("run", true);
+
+        }
+        else
+        {
+            anim.SetBool("run", false);
+
+        }
 
         if (Input.GetKey(KeyCode.J))
         {
@@ -151,6 +153,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
+
             anim.SetBool("Jump", true);
         }
         else
@@ -168,12 +171,6 @@ public class Player : MonoBehaviour
             health = health + 1;
             SetCountText();
         }
-
-
-
-
-
-
 
 
         if (sMoveType)
@@ -226,7 +223,7 @@ public class Player : MonoBehaviour
         inputV = Input.GetAxis("Vertical");
         anim.SetFloat("inputH", inputH);
         anim.SetFloat("inputV", inputV);
-
+       
         if (Input.GetKeyDown(KeyCode.J))
         {
 
@@ -252,10 +249,11 @@ public class Player : MonoBehaviour
         // if health equal to 0 player is dead 
         if (health <= 0)
         {
-            anim.SetTrigger("Dead");
+   
+            anim.SetTrigger("Death");
             // end game texEt
             Playerhealthtext.text = "your dead";
-            alive = false;
+             alive = false;
             // Reset();
         }
 
@@ -266,12 +264,12 @@ public class Player : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
 
-        if (Input.GetKeyDown("y") &&  other.gameObject.CompareTag("itemMach"))
+        if (Input.GetKeyUp("y") && other.gameObject.CompareTag("itemMach"))
         {
 
             Debug.Log("hit");
-            int randomDrop = Random.Range(0, 4);
-            int randomPickup = Random.Range(0, pickups.Length -1);
+            int randomDrop = Random.Range(0, 3);
+            int randomPickup = Random.Range(0, pickups.Length - 1);
 
             if (randomDrop < 4)
             {
@@ -280,17 +278,34 @@ public class Player : MonoBehaviour
 
             }
         }
+
+
     }
 
-   
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "eyes")
+        {
+            other.transform.parent.GetComponent<EnemyRandomMove>().see = true;
+            Debug.Log("sees you exit");
+        }
+
+
+
+
+
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "eyes")
         {
-            other.transform.parent.GetComponent<EnemyRandomMove>().CheckPlayerinsight();
+            other.transform.parent.GetComponent<EnemyRandomMove>().see = true;
+            Debug.Log("sees you enter ");
         }
 
+      
 
         // ..and if the game object we intersect has the tag 'Pick Up' assigned to it..
         if (other.gameObject.CompareTag("Case"))

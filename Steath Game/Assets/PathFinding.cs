@@ -6,72 +6,88 @@ using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 public class PathFinding : MonoBehaviour
 {
-    Transform waypoint;
-    GameObject Enemy2;
-
-
-    private float enemytimer = 10;
-
-    public List<GameObject> enemy;
-    public int totalenemy = 10;
-    public GameObject[] pickups;
+    private float awareness = 20f;
+    private string state = "idle";
+    private float wait = 0f;
     public GameObject player;
-    public int enemyhealth = 1;
+    public int badguyhealth = 1;
     public Transform eyes;
     private NavMeshAgent agent;
     static Animator animate;
-    private string state = "idle";
-    private bool alive = true;
-    private float wait = 0f;
-    private bool alert = false;
-    private float awareness = 20f;
-    // Start is called before the first frame update
+
+
+    public Transform[] path;
+    private float speed = 5.0f;
+    private int current = 0;
+    private float disreached = 1.0f;
+    public bool seeyou = false;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animate = GetComponent<Animator>();
         agent.speed = 10.2f;
         animate.speed = 1.2f;
-
     }
 
 
 
+
+    void Pathfollowing()
+    {
+        //total distance between pathfolling and enemy pos
+        float dist = Vector3.Distance(path[current].position, transform.position);
+        //enemy will move towards curennnt path position
+        Vector3 pos = Vector3.MoveTowards(transform.position, path[current].position, speed * Time.deltaTime);
+
+
+        transform.position = pos;
+
+        if (dist <= disreached)
+        {
+            current++;
+        }
+
+        if (current >= path.Length)
+        {
+
+            current = 0;
+
+        }
+
+        animate.SetBool("isWalking", true);
+        agent.SetDestination(path[current].transform.position);
+
+
+        state = "Walk";
+
+    }
 
 
 
     public void CheckPlayerinsight()
     {
-        if (alive)
+
+        RaycastHit rayHit;
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        Debug.DrawRay(eyes.position, fwd, Color.red);
+
+        if (Physics.Linecast(eyes.position, fwd * 20.0f, out rayHit))
         {
-            RaycastHit rayHit;
-            if (Physics.Linecast(eyes.position, player.transform.position, out rayHit))
+
+            if (rayHit.collider.gameObject.tag == "Player")
             {
-                // print("hit" + rayHit.collider.gameObject.name);
-                if (rayHit.collider.gameObject.name == "Player")
-                {
 
-                    if (state != "kill")
-                    {
-                        state = "chase";
-                        Debug.Log("chase");
-                        agent.speed = 10.5f;
-                        // animate.speed = 3.5f;
+                state = "chase";
+                Debug.Log("chase");
+                agent.speed = 10.5f;
+                animate.SetBool("isWalking", true);
 
-                    }
-                }
 
             }
 
         }
     }
-
-
-
-
-
-
-
 
 
 
@@ -80,122 +96,154 @@ public class PathFinding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (alive)
+
+        CheckPlayerinsight();
+     
+
+        if (player.GetComponent<Player>().alive)
         {
             animate.SetFloat("velocity", agent.velocity.magnitude);
-
+            animate.SetBool("isWalking", true);
             //Idle
             if (state == "idle")
             {
-                     state = "Walk";
-
-                //way point walk
+                Pathfollowing();
             }
 
-        }
-
-
-
-        if (state == "Walk")
-        {
-            if (agent.remainingDistance <= agent.stoppingDistance && !agent.pathPending)
+            //walking 
+            if (state == "Walk")
             {
-                state = "search";
-                wait = 5f;
-                Debug.Log("search");
-
-            }
-        }
-
-
-
-        //look for player
-        if (state == "search")
-        {
-            if (wait > 0f)
-            {
-                wait -= Time.deltaTime;
-                transform.Rotate(0f, 120f * Time.deltaTime, 0f);
-            }
-            else
-            {
-                state = "idle";
-            }
-        }
-
-
-
-        //Chase
-        if (state == "chase")
-        {
-            agent.SetDestination(player.transform.position);
-
-            // enemy loses player
-            float distance = Vector3.Distance(transform.position, player.transform.position);
-            print("Distance to other: " + distance);
-
-            //search
-            if (distance > 1f)
-            {
-                state = "somethingwrong";
-                Debug.Log("somethingwrong");
-            }
-
-            else if (distance < 1)
-            {
-                //if player is alive kill them
-                if (player.GetComponent<Player>().alive)
+                animate.SetBool("isWalking", true);
+                if (agent.remainingDistance <= agent.stoppingDistance && !agent.pathPending)
                 {
+                    animate.SetBool("isWalking", true);
+                    state = "search";
+                    wait = 5f;
+                    Debug.Log("search");
 
-                    state = "kill";
-                    Debug.Log("kill");
-                    player.GetComponent<Player>().alive = false;
+                }
+            }
+
+
+            //look for player
+            if (state == "search")
+            {
+                if (wait > 0f)
+                {
+                    animate.SetBool("isWalking", false);
+                    wait -= Time.deltaTime;
+                    transform.Rotate(0f, 120f * Time.deltaTime, 0f);
+                }
+                else
+                {
+                    state = "idle";
+                }
+            }
+
+
+
+
+
+
+            //Chase
+            if (state == "chase")
+            {
+                animate.SetBool("isWalking", true);
+                agent.SetDestination(player.transform.position);
+
+                // enemy loses player
+                float distance = Vector3.Distance(transform.position, player.transform.position);
+                print("Distance to other: " + distance);
+
+                //search
+                if (distance > 10f)
+                {
+                    state = "idle";
+                }
+
+                else if (distance < 10)
+                {
+                    //if player is alive kill them
+                    if (player.GetComponent<Player>().alive)
+                    {
+                        agent.SetDestination(player.transform.position);
+                        state = "kill";
+                        Debug.Log("kill");
+                    }
+
+                }
+
+
+
+            }
+
+     
+
+
+
+
+            // will try to kill player 
+            if (state == "kill")
+            {
+
+                agent.SetDestination(player.transform.position);
+
+                animate.SetBool("isAttacking", true);
+                animate.SetBool("isWalking", false);
+
+                animate.speed = 1f;
+
+
+                // enemy loses player
+                float distance = Vector3.Distance(transform.position, player.transform.position);
+                print("Distance to other: " + distance);
+
+                //search
+                if (distance > 12f)
+                {
+                    animate.SetBool("isWalking", true);
+                    animate.SetBool("isAttacking", true);
+                    state = "idle";
+                }
+
+                else if (distance < 12)
+                {
+                    //if player is alive kill them
+                    if (player.GetComponent<Player>().alive)
+                    {
+                        animate.SetBool("isWalking", false);
+                        animate.SetBool("isAttacking", true);
+                        state = "kill";
+                        Debug.Log("kill");
+                    }
+
                 }
 
             }
-
-            if (enemyhealth < 2)
+            else
             {
-
-                state = "Walk";
-
-            }
-
-        }
-
-        //some thing is wrong look around
-        if (state == "somethingwrong")
-        {
-            if (agent.remainingDistance <= agent.stoppingDistance && !agent.pathPending)
-            {
-
-                state = "search";
-
-                wait = 5f;
-                alert = true;
-                awareness = 5f;
-                ;
-                CheckPlayerinsight();
-
+                animate.SetBool("isAttacking", false);
             }
         }
 
+    }
 
-        // will try to kill player 
-        if (state == "kill")
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        // if emeny is hit by bulllet health goes down 
+        if (other.gameObject.tag == "Bullet")
         {
-
-            animate.SetBool("isAttacking", true);
-            animate.SetBool("isWalking", false);
-
-            animate.speed = 1f;
-
-            agent.SetDestination(player.transform.position);
-
-        }
-        else
-        {
-            animate.SetBool("isAttacking", false);
+            badguyhealth = badguyhealth - 1;
+            Debug.Log("hit");
         }
     }
+
 }
+
+
+
+
+
+

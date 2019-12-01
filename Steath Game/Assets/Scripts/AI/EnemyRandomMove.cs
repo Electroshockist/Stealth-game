@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class EnemyRandomMove : MonoBehaviour
 {
     private float enemytimer = 10;
-
+    
     public List<GameObject> enemy;
     public int totalenemy = 10;
     public GameObject[] pickups;
@@ -20,6 +20,7 @@ public class EnemyRandomMove : MonoBehaviour
     private float wait = 0f;
     private bool alert = false;
     private float awareness = 20f;
+    public bool see = false;
 
     void Start()
     {
@@ -30,28 +31,25 @@ public class EnemyRandomMove : MonoBehaviour
         animate.speed = 1.2f;
     }
 
-    // this makes sure that the player is seen by enemy 
+     //this makes sure that the player is seen by enemy
     public void CheckPlayerinsight()
     {
-        if (player.GetComponent<Player>().alive)
-            {
-            RaycastHit rayHit;
-            if (Physics.Linecast(eyes.position, player.transform.position, out rayHit))
-            {
-                // print("hit" + rayHit.collider.gameObject.name);
-                if (rayHit.collider.gameObject.tag == "Player")
-                {
 
-                    if (state != "kill")
-                    {
-                        animate.SetBool("isWalking", true);
-                        state = "chase";
-                        Debug.Log("chase");
-                        agent.speed = 10.5f;
-                        animate.speed = 3.5f;
+        RaycastHit rayHit;
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        Debug.DrawRay(eyes.position, fwd, Color.red);
 
-                    }
-                }
+        if (Physics.Linecast(eyes.position, fwd * 20.0f, out rayHit))
+        {
+
+            if (rayHit.collider.gameObject.tag == "Player")
+            {
+                state = "chase";
+                Debug.Log("chase");
+                agent.speed = 10.5f;
+                animate.SetBool("isWalking", true);
+
+
 
             }
 
@@ -78,8 +76,14 @@ public class EnemyRandomMove : MonoBehaviour
     void Update()
 
     {
-        ///  Debug.DrawLine(eyes.position, player.transform.position, Color.green);
-        if (enemyhealth <= 0)
+
+        if (see == true)
+        {
+            CheckPlayerinsight();
+        }
+
+
+      if (enemyhealth <= 0)
         {
             death();
         }
@@ -168,18 +172,18 @@ public class EnemyRandomMove : MonoBehaviour
                 print("Distance to other: " + distance);
 
                 //search
-                if (distance > 1f)
+                if (distance > 10f)
                 {
                     state = "somethingwrong";
                     Debug.Log("somethingwrong");
                 }
 
-              else  if (distance< 1)
+              else  if (distance< 10)
                 {
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)
                     {
-
+                        agent.SetDestination(player.transform.position);
                         state = "kill";
                         Debug.Log("kill");
                     }
@@ -227,20 +231,20 @@ public class EnemyRandomMove : MonoBehaviour
 
                 //some thing is wrong look around
                 if (state == "somethingwrong")
-            {
-                if (agent.remainingDistance <= agent.stoppingDistance && !agent.pathPending)
                 {
-                    animate.SetBool("isWalking", false);
-                    state = "search";
+                    if (agent.remainingDistance <= agent.stoppingDistance && !agent.pathPending)
+                    {
+                        animate.SetBool("isWalking", true);
+                        state = "search";
                    
-                    wait = 5f;
-                    alert = true;
-                    awareness = 5f;
-                ;
-                    CheckPlayerinsight();
-
+                        wait = 5f;
+                        alert = true;
+                        awareness = 5f;
+                
+                        CheckPlayerinsight();
+     
+                    }
                 }
-            }
 
 
             // will try to kill player 

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Player : MonoBehaviour
@@ -281,17 +280,19 @@ public class Player : MonoBehaviour
         }
 
 
-
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.name == "eyes")
         {
-            other.transform.parent.GetComponent<EnemyRandomMove>().CheckPlayerinsight();
-
-            Debug.Log("sees you ");
+            other.transform.parent.GetComponent<EnemyRandomMove>().see = true;
+            Debug.Log("sees you exit");
         }
+
+
+
+
 
     }
 
@@ -300,13 +301,11 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.name == "eyes")
         {
-            other.transform.parent.GetComponent<EnemyRandomMove>().CheckPlayerinsight();
-          
-            Debug.Log("sees you ");
+            other.transform.parent.GetComponent<EnemyRandomMove>().see = true;
+            Debug.Log("sees you enter ");
         }
 
-   
-
+      
 
         // ..and if the game object we intersect has the tag 'Pick Up' assigned to it..
         if (other.gameObject.CompareTag("Case"))

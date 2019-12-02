@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Steath Game/Assets/Scripts/Museum.meta
 guid: af098d4dbb56e4047ac1249fd355b85f
+=======
+guid: 34da5bb3744af974aa8fc7b30173a04c
+>>>>>>> Marco's-Branch:Steath Game/Assets/Shaders.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

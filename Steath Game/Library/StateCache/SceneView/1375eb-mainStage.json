@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":0.10500001907348633,"y":0.8830000162124634,"z":-1.4700000286102296},"rotation":{"x":-0.04821193218231201,"y":-0.9494444727897644,"z":0.2511458098888397,"w":-0.1821846216917038},"size":19.386770248413087,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-0.2294173240661621,"y":-0.5578556060791016,"z":1.6474719047546387},"rotation":{"x":-0.16933254897594453,"y":-0.7832769155502319,"z":0.24256935715675355,"w":-0.546903669834137},"size":7.175520420074463,"orthographic":false}
+>>>>>>> Marco's-Branch

@@ -1,14 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Steath Game/Assets/Scripts/Aera51.meta
-guid: 2acbe7b87c044c440b77101474bb7690
-folderAsset: yes
-DefaultImporter:
-=======
-guid: 41b9a90547ed0a14a849bc42a3d73f71
+guid: 178137aded8bac94e993bb5734a19623
 NativeFormatImporter:
->>>>>>> Marco's-Branch:Steath Game/Assets/Shaders/Purple.mat.meta
   externalObjects: {}
-  mainObjectFileID: 2100000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

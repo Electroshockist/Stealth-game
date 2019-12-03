@@ -1,5 +1,6 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/Scenes/Start.unity
 =======
 <<<<<<< HEAD
@@ -8,6 +9,9 @@ sceneSetups:
 - path: Assets/Scenes/Museum.unity
 >>>>>>> Marco's-Branch
 >>>>>>> master
+=======
+- path: Assets/Scenes/Park.unity
+>>>>>>> Marco's-Branch
   isLoaded: 1
   isActive: 1
   isSubScene: 0

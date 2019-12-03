@@ -20,21 +20,8 @@ MonoBehaviour:
     height: 637.3334
   m_ShowMode: 4
   m_Title: 
-<<<<<<< HEAD
-  m_RootView: {fileID: 8}
-<<<<<<< HEAD
+  m_RootView: {fileID: 6}
   m_MinSize: {x: 950, y: 300}
-=======
-  m_MinSize: {x: 950, y: 616}
-=======
-  m_RootView: {fileID: 5}
-<<<<<<< HEAD
-  m_MinSize: {x: 950, y: 322}
->>>>>>> Marco's-Branch
->>>>>>> master
-=======
-  m_MinSize: {x: 950, y: 300}
->>>>>>> Marco's-Branch
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -44,24 +31,23 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children: []
+  m_Children:
+  - {fileID: 9}
+  - {fileID: 3}
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 222
-    width: 862
-    height: 222
-  m_MinSize: {x: 204, y: 222}
-  m_MaxSize: {x: 4004, y: 4022}
-  m_ActualView: {fileID: 19}
-  m_Panes:
-  - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 0
+    y: 30
+    width: 1280
+    height: 588
+  m_MinSize: {x: 683, y: 494}
+  m_MaxSize: {x: 14004, y: 14044}
+  vertical: 0
+  controlID: 121
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -70,23 +56,24 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 13}
-  - {fileID: 2}
+  m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 283
+    x: 1003
     y: 0
-    width: 862
-    height: 444
-  m_MinSize: {x: 204, y: 444}
-  m_MaxSize: {x: 4004, y: 8044}
-  vertical: 1
-  controlID: 54
+    width: 277
+    height: 588
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -96,38 +83,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children:
-<<<<<<< HEAD
-  - {fileID: 11}
-  - {fileID: 5}
-=======
-  - {fileID: 8}
-  - {fileID: 3}
->>>>>>> Marco's-Branch
+  m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 30
-<<<<<<< HEAD
-    width: 1536
-    height: 731
-  m_MinSize: {x: 683, y: 716}
-  m_MaxSize: {x: 14004, y: 18066}
-  vertical: 0
-  controlID: 150
+    y: 0
+    width: 248
+    height: 316
+  m_MinSize: {x: 202, y: 222}
+  m_MaxSize: {x: 4002, y: 4022}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 0
 --- !u!114 &5
-=======
-    width: 1280
-    height: 588
-  m_MinSize: {x: 638, y: 272}
-  m_MaxSize: {x: 18008, y: 10022}
-  vertical: 0
-  controlID: 81
---- !u!114 &3
->>>>>>> Marco's-Branch
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,31 +115,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1145
-    y: 0
-    width: 391
-    height: 731
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
-  m_ActualView: {fileID: 16}
-  m_Panes:
-  - {fileID: 16}
-  m_Selected: 0
-=======
-    x: 899
-    y: 0
-    width: 381
-    height: 588
+    x: 0
+    y: 316
+    width: 1003
+    height: 272
   m_MinSize: {x: 232, y: 272}
   m_MaxSize: {x: 10002, y: 10022}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
-  - {fileID: 12}
-  - {fileID: 16}
-  m_Selected: 1
->>>>>>> Marco's-Branch
+  - {fileID: 18}
+  m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -177,85 +136,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-<<<<<<< HEAD
-    width: 283
-    height: 444
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
-  m_ActualView: {fileID: 17}
-  m_Panes:
-  - {fileID: 17}
-=======
-    width: 238
-    height: 588
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
->>>>>>> Marco's-Branch
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &7
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-<<<<<<< HEAD
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 444
-    width: 1145
-    height: 287
-  m_MinSize: {x: 232, y: 272}
-  m_MaxSize: {x: 10002, y: 10022}
-  m_ActualView: {fileID: 15}
-  m_Panes:
-  - {fileID: 15}
-  - {fileID: 20}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &8
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-=======
->>>>>>> Marco's-Branch
   m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-<<<<<<< HEAD
-  - {fileID: 9}
-  - {fileID: 4}
-  - {fileID: 10}
-=======
-  - {fileID: 6}
-  - {fileID: 2}
   - {fileID: 7}
->>>>>>> Marco's-Branch
+  - {fileID: 2}
+  - {fileID: 8}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -264,11 +151,7 @@ MonoBehaviour:
     height: 638
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-<<<<<<< HEAD
---- !u!114 &9
-=======
---- !u!114 &6
->>>>>>> Marco's-Branch
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,17 +172,8 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-<<<<<<< HEAD
   m_LastLoadedLayoutName: 
-=======
-<<<<<<< HEAD
-  m_LastLoadedLayoutName: Default
->>>>>>> master
---- !u!114 &10
-=======
-  m_LastLoadedLayoutName: 
---- !u!114 &7
->>>>>>> Marco's-Branch
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,8 +194,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-<<<<<<< HEAD
---- !u!114 &11
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -334,62 +207,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 12}
-  - {fileID: 7}
+  - {fileID: 10}
+  - {fileID: 5}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1145
-    height: 731
-  m_MinSize: {x: 406, y: 716}
-  m_MaxSize: {x: 10002, y: 18066}
-  vertical: 1
-  controlID: 52
---- !u!114 &12
-=======
---- !u!114 &8
->>>>>>> Marco's-Branch
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-<<<<<<< HEAD
-  - {fileID: 6}
-  - {fileID: 3}
-=======
-  - {fileID: 4}
-  - {fileID: 9}
->>>>>>> Marco's-Branch
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-<<<<<<< HEAD
-    width: 1145
-    height: 444
-  m_MinSize: {x: 406, y: 444}
-  m_MaxSize: {x: 8006, y: 8044}
-  vertical: 0
-  controlID: 53
---- !u!114 &13
-=======
-    width: 899
+    width: 1003
     height: 588
+  m_MinSize: {x: 406, y: 494}
+  m_MaxSize: {x: 10002, y: 14044}
+  vertical: 1
+  controlID: 51
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 4}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1003
+    height: 316
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 59
---- !u!114 &9
->>>>>>> Marco's-Branch
+  controlID: 52
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -404,117 +259,20 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 0
+    x: 248
     y: 0
-    width: 862
-    height: 222
+    width: 755
+    height: 316
   m_MinSize: {x: 204, y: 222}
   m_MaxSize: {x: 4004, y: 4022}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 18}
-  - {fileID: 14}
+  - {fileID: 16}
+  - {fileID: 17}
+  - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &14
-=======
-    x: 238
-    y: 0
-    width: 661
-    height: 588
-  m_MinSize: {x: 204, y: 222}
-  m_MaxSize: {x: 4004, y: 4022}
-  m_ActualView: {fileID: 15}
-  m_Panes:
-  - {fileID: 15}
-  - {fileID: 11}
-  - {fileID: 10}
-  m_Selected: 0
-  m_LastSelected: 2
---- !u!114 &10
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 303.2
-    y: 73.6
-    width: 920
-    height: 423
-  m_ViewDataDictionary: {fileID: 0}
-  m_VSyncEnabled: 0
-  m_MaximizeOnPlay: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_TargetDisplay: 0
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -460
-    m_HBaseRangeMax: 460
-    m_VBaseRangeMin: -203
-    m_VBaseRangeMax: 203
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 17
-      width: 920
-      height: 406
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 460, y: 203}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -460
-      y: -203
-      width: 920
-      height: 406
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_TargetTexture: {fileID: 0}
-  m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 920, y: 423}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 00000000000000000000
-  m_XRRenderMode: 0
---- !u!114 &11
->>>>>>> Marco's-Branch
+  m_LastSelected: 1
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -540,11 +298,7 @@ MonoBehaviour:
     width: 973
     height: 501
   m_ViewDataDictionary: {fileID: 0}
-<<<<<<< HEAD
---- !u!114 &15
-=======
---- !u!114 &12
->>>>>>> Marco's-Branch
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -565,17 +319,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 0
-    y: 517.60004
-    width: 1145
-    height: 268
-=======
-    x: 899.3334
-    y: 72.66667
-    width: 379
-    height: 569
->>>>>>> Marco's-Branch
+    y: 388.6667
+    width: 1003
+    height: 253
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -590,56 +337,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-<<<<<<< HEAD
     - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Scenes
-=======
-<<<<<<< HEAD
-    - Assets
-  m_ViewMode: 1
-  m_StartGridSize: 64
-  m_LastFolders:
-  - Assets
-=======
-    - Assets/Scenes
-  m_ViewMode: 1
-  m_StartGridSize: 64
-  m_LastFolders:
-  - Assets/Scenes
->>>>>>> Marco's-Branch
->>>>>>> master
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Marco Colonna\Desktop\Stealth-game\Steath Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-<<<<<<< HEAD
-    scrollPos: {x: 0, y: 72}
-    m_SelectedIDs: 0c360000
-    m_LastClickedID: 13836
-    m_ExpandedIDs: 00000000a42d0000902e0000a82f00005e300000a0310000ac310000de310000463200004834000096340000a6340000d03500004a360000843600009e3700002e3800002a3900006c3b0000ec3b0000fe3c0000003d000000ca9a3b
-=======
-<<<<<<< HEAD
-    scrollPos: {x: 0, y: 4}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a22d00008e2e0000a62f0000c82f00005c3000009e310000aa310000dc310000443200004634000094340000a4340000ce35000048360000823600009c3700002c380000283900006c3b0000ea3b0000643d0000663d000000ca9a3b
-=======
-    scrollPos: {x: 0, y: 251}
-<<<<<<< HEAD
-    m_SelectedIDs: 56620000
-    m_LastClickedID: 25174
-    m_ExpandedIDs: 00000000de5f00001060000034600000486000005260000086600000a8600000a4610000566200008c620000486300005a63000072630000e0630000ec630000fe6300002064000024640000986400009a64000000ca9a3b
->>>>>>> Marco's-Branch
->>>>>>> master
-=======
-    m_SelectedIDs: c2320000
-    m_LastClickedID: 12994
-    m_ExpandedIDs: 00000000902d0000d02d0000142e00003a2e0000c02e0000142f00006a2f00003c310000c23200003a330000a4340000c4340000f2340000c835000006360000183600005036000064360000244000002640000000ca9a3b
->>>>>>> Marco's-Branch
+    scrollPos: {x: 0, y: 87}
+    m_SelectedIDs: 5aa10000
+    m_LastClickedID: 41306
+    m_ExpandedIDs: 00000000be9e0000169f0000669f0000be9f00002aa000002ea0000038a000005ca00000eca0000008a100000ea100004ea1000060a1000072a10000cea10000faa1000064a2000002a3000038a3000062a3000064a3000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -655,7 +366,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 3}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -667,19 +378,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000a42d0000902e0000a82f00005e300000a0310000ac310000de310000463200004834000096340000a6340000d03500004a360000843600009e3700002e3800002a3900006c3b0000ec3b0000fe3c0000003d0000
-=======
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000a22d00008e2e0000a62f00005c3000009e310000aa310000dc310000443200004634000094340000a4340000ce35000048360000823600009c3700002c380000283900006c3b0000ea3b0000643d0000663d000000ca9a3b
-=======
-    m_ExpandedIDs: 00000000de5f000010600000346000004863000072630000ec63000020640000986400009a640000
->>>>>>> Marco's-Branch
->>>>>>> master
-=======
-    m_ExpandedIDs: 00000000902d0000d02d0000142e00003a2e0000c02e0000142f00006a2f00003c310000c23200003a330000a4340000c4340000f2340000c8350000063600001836000050360000643600002440000026400000
->>>>>>> Marco's-Branch
+    m_ExpandedIDs: 00000000be9e0000169f0000669f0000be9f00002aa000002ea0000038a000005ca00000eca0000008a100000ea100004ea1000060a1000072a10000cea10000faa1000064a2000002a3000038a3000062a3000064a30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -704,23 +403,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-<<<<<<< HEAD
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-=======
-<<<<<<< HEAD
-    m_SelectedInstanceIDs: ee7afeff
-    m_LastClickedInstanceID: -99602
-    m_HadKeyboardFocusLastEvent: 0
->>>>>>> master
-    m_ExpandedInstanceIDs: c6230000e8320000
-=======
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
->>>>>>> Marco's-Branch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -736,11 +422,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-<<<<<<< HEAD
       m_ClientGUIView: {fileID: 0}
-=======
-      m_ClientGUIView: {fileID: 3}
->>>>>>> Marco's-Branch
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -751,13 +433,8 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-<<<<<<< HEAD
   m_DirectoriesAreaWidth: 115
---- !u!114 &16
-=======
-  m_DirectoriesAreaWidth: 203
---- !u!114 &13
->>>>>>> Marco's-Branch
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -778,17 +455,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1144.8
-    y: 73.6
-    width: 389
-    height: 712
-=======
-    x: 899.3334
+    x: 1003.3334
     y: 72.66667
-    width: 379
+    width: 275
     height: 569
->>>>>>> Marco's-Branch
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
@@ -800,13 +470,9 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-<<<<<<< HEAD
---- !u!114 &17
-=======
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
---- !u!114 &14
->>>>>>> Marco's-Branch
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -828,41 +494,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 73.6
-    width: 283
-    height: 425
-=======
     y: 72.66667
-    width: 238
-    height: 569
->>>>>>> Marco's-Branch
+    width: 248
+    height: 297
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-<<<<<<< HEAD
-      scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
-      m_SelectedIDs: d8390000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 28faffff76faffffdcfaffff78fbffff
-=======
-<<<<<<< HEAD
-      m_SelectedIDs: 263bffff
-      m_LastClickedID: -50394
-      m_ExpandedIDs: 243bffff263bffffd8faffffae3d0000
-=======
-      m_SelectedIDs: f05f0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 2828fdff462ffdffb437fdff0a43fdff304afdffa652fdffd852fdffa85bfdffde63fdffe26ffdff3c04feff1a40feffb047feff0648feff74c3feff7acefeff64d4feff64e0feff9ee0feff103bffffc864ffff0665ffff0a6cffff406cffffda71ffffea72ffff907500004a800000
->>>>>>> Marco's-Branch
->>>>>>> master
-=======
-      scrollPos: {x: 0, y: 840}
-      m_SelectedIDs: 9e470000
-      m_LastClickedID: 18334
-      m_ExpandedIDs: 5ceaffff74ebffff82f2ffff6afbffff
->>>>>>> Marco's-Branch
+      scrollPos: {x: 0, y: 584}
+      m_SelectedIDs: 0acd0000
+      m_LastClickedID: 52490
+      m_ExpandedIDs: f085feff0887feff288efeff7096feff60a1feffb0a9feff86b4feffacbbfeff6abcfeff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -878,20 +519,15 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 6}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
-<<<<<<< HEAD
-  m_WindowGUID: 8e48ac71b7a3da448808b8ab8ace2a13
---- !u!114 &18
-=======
-  m_WindowGUID: 376996d6aa4ff3b41ab90cf59bc03b43
---- !u!114 &15
->>>>>>> Marco's-Branch
+  m_WindowGUID: 18e2cd1b252883f438ca526aaeec3eec
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -912,20 +548,13 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 283.2
-    y: 73.6
-    width: 860
-    height: 203
-=======
-    x: 238
+    x: 248
     y: 72.66667
-    width: 659
-    height: 569
->>>>>>> Marco's-Branch
+    width: 753
+    height: 297
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
-  m_WindowGUID: d8219321f50b1be4db8e469876a1d959
+  m_WindowGUID: ecd9d547b29336c4d89f056e40325de8
   m_Gizmos: 1
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -934,27 +563,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_Target: {x: 3.8911438, y: 19.4546, z: -15.3551445}
+    m_Target: {x: 0.78203917, y: -2.0408318, z: 0.93464005}
     speed: 2
-    m_Value: {x: 3.8911438, y: 19.4546, z: -15.3551445}
-=======
-<<<<<<< HEAD
-    m_Target: {x: -0.00082588196, y: 1.3090432, z: 1.8699999}
-    speed: 2
-    m_Value: {x: -0.00082588196, y: 1.3090432, z: 1.8699999}
-=======
-    m_Target: {x: -0.22941732, y: -0.5578556, z: 1.6474719}
-    speed: 2
-    m_Value: {x: -0.22941732, y: -0.5578556, z: 1.6474719}
->>>>>>> Marco's-Branch
->>>>>>> master
-=======
-    m_Target: {x: -3.3897204, y: -0.3841291, z: -2.7747371}
-    speed: 2
-    m_Value: {x: -3.3897204, y: -0.3841291, z: -2.7747371}
->>>>>>> Marco's-Branch
+    m_Value: {x: 0.78203917, y: -2.0408318, z: 0.93464005}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -983,39 +594,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_Target: {x: -0.048673153, y: 0.9464904, z: -0.17106885, w: -0.26929954}
-=======
-<<<<<<< HEAD
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
->>>>>>> master
+    m_Target: {x: -0.12523516, y: 0.8620101, z: -0.25846475, w: -0.41767383}
     speed: 2
-    m_Value: {x: -0.04907705, y: 0.94623274, z: -0.17248839, w: -0.26922622}
+    m_Value: {x: -0.12460846, y: 0.86239654, z: -0.25717136, w: -0.41786107}
   m_Size:
-    m_Target: 74.91303
+    m_Target: 5.4073954
     speed: 2
-<<<<<<< HEAD
-    m_Value: 71.68711
-=======
-    m_Value: 28.555208
-=======
-    m_Target: {x: -0.16933255, y: -0.7832769, z: 0.24256936, w: -0.54690367}
-=======
-    m_Target: {x: -0.24816626, y: -0.722787, z: 0.32046697, w: -0.559852}
->>>>>>> Marco's-Branch
-    speed: 2
-    m_Value: {x: -0.24766783, y: -0.72357506, z: 0.32081628, w: -0.55872786}
-  m_Size:
-    m_Target: 2.6045768
-    speed: 2
-<<<<<<< HEAD
-    m_Value: 7.5136337
->>>>>>> Marco's-Branch
->>>>>>> master
-=======
-    m_Value: 2.9045768
->>>>>>> Marco's-Branch
+    m_Value: 5.7073956
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1041,8 +626,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
-<<<<<<< HEAD
---- !u!114 &19
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1063,10 +647,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 283.2
-    y: 295.2
-    width: 860
-    height: 203
+    x: 507
+    y: 94
+    width: 1532
+    height: 790
   m_ViewDataDictionary: {fileID: 0}
   m_VSyncEnabled: 0
   m_MaximizeOnPlay: 0
@@ -1079,10 +663,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -430
-    m_HBaseRangeMax: 430
-    m_VBaseRangeMin: -93
-    m_VBaseRangeMax: 93
+    m_HBaseRangeMin: -766
+    m_HBaseRangeMax: 766
+    m_VBaseRangeMin: -386.5
+    m_VBaseRangeMax: 386.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1100,33 +684,30 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 860
-      height: 186
+      width: 1532
+      height: 773
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 430, y: 93}
+    m_Translation: {x: 766, y: 386.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -430
-      y: -93
-      width: 860
-      height: 186
+      x: -766
+      y: -386.5
+      width: 1532
+      height: 773
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
-  m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1075, y: 253.75}
+  m_CurrentColorSpace: 1
+  m_LastWindowPixelSize: {x: 1532, y: 790}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 00000000000000000000
+  m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
---- !u!114 &20
-=======
---- !u!114 &16
->>>>>>> Marco's-Branch
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1147,15 +728,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 0
-    y: 517.60004
-    width: 1145
-    height: 268
-=======
-    x: 943.3334
-    y: 72.66667
-    width: 335
-    height: 569
->>>>>>> Marco's-Branch
+    x: 8
+    y: 718
+    width: 1366
+    height: 308
   m_ViewDataDictionary: {fileID: 0}

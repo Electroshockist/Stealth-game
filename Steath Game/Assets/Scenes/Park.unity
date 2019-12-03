@@ -1318,7 +1318,7 @@ PrefabInstance:
     - target: {fileID: 3572994252136858538, guid: 10c27d38b7b88a14a9cd8de080d988cf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.617614
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 3572994252136858538, guid: 10c27d38b7b88a14a9cd8de080d988cf,
         type: 3}
@@ -1328,7 +1328,7 @@ PrefabInstance:
     - target: {fileID: 3572994252136858538, guid: 10c27d38b7b88a14a9cd8de080d988cf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.8117528
+      value: 1.53
       objectReference: {fileID: 0}
     - target: {fileID: 3572994252136858538, guid: 10c27d38b7b88a14a9cd8de080d988cf,
         type: 3}
@@ -8970,6 +8970,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114386029696861370, guid: b0d151cc7c2a6ca4d9967f5e2922c737,
+        type: 3}
+      propertyPath: m_Text
+      value: Items 0/3
+      objectReference: {fileID: 0}
     - target: {fileID: 224148190171413600, guid: b0d151cc7c2a6ca4d9967f5e2922c737,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9074,11 +9079,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114386029696861370, guid: b0d151cc7c2a6ca4d9967f5e2922c737,
-        type: 3}
-      propertyPath: m_Text
-      value: Items 0/3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0d151cc7c2a6ca4d9967f5e2922c737, type: 3}
@@ -9983,6 +9983,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4997948956579623445, guid: d8f0d6a79fb0c4d47bc419abf9e50d73,
+        type: 3}
+      propertyPath: m_Name
+      value: Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 4997948956579623445, guid: d8f0d6a79fb0c4d47bc419abf9e50d73,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4997948956579623449, guid: d8f0d6a79fb0c4d47bc419abf9e50d73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10036,16 +10046,6 @@ PrefabInstance:
     - target: {fileID: 4997948956579623449, guid: d8f0d6a79fb0c4d47bc419abf9e50d73,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4997948956579623445, guid: d8f0d6a79fb0c4d47bc419abf9e50d73,
-        type: 3}
-      propertyPath: m_Name
-      value: Map
-      objectReference: {fileID: 0}
-    - target: {fileID: 4997948956579623445, guid: d8f0d6a79fb0c4d47bc419abf9e50d73,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 292209268524042763, guid: d8f0d6a79fb0c4d47bc419abf9e50d73,

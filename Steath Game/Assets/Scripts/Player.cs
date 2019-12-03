@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     public float jumpSpeed = 6.0f;
     public float gravity = 9.81f;
 
+    private bool bulletOut = false;
+    private int bulletTimer = 0;
+
     private float inputH;
     private float inputV;
     Vector3 movDirection = Vector3.zero;
@@ -83,21 +86,17 @@ public class Player : MonoBehaviour
             sMoveType = !sMoveType;
         }
 
-
-            if (health>=3)
+        if (health >= 3)
         {
             health = 3;
             SetCountText();
-
         }
-
 
         if (item >= 3)
         {
             item = 3;
             SetCountText();
         }
-
 
         if (Briefcase >= 3)
         {
@@ -106,49 +105,52 @@ public class Player : MonoBehaviour
         }
 
         //animate
-        if (Input.GetKeyDown("w"))
-        {
-            anim.Play("walk", -1, 0f);
-            // anim.Play("WAIT00", -1, 0f);
-        
-        }
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    anim.Play("walk", -1, 0f);
+        //    //anim.Play("WAIT00", -1, 0f);
+        //}
 
         if (Input.GetKey(KeyCode.Q))
         {
             anim.SetBool("crouch", true);
-
         }
         else
         {
             anim.SetBool("crouch", false);
-
         }
 
 
         if (Input.GetKey(KeyCode.E))
         {
-
             anim.SetBool("run", true);
-
         }
         else
         {
             anim.SetBool("run", false);
-
         }
 
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J) && !bulletOut)
         {
+            Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+            bulletOut = true;
+            bulletTimer = 0;
             anim.SetBool("shoot", true);
         }
         else
         {
             anim.SetBool("shoot", false);
-
         }
 
 
-
+        if (bulletOut)
+        {
+            if(bulletTimer == 5)
+            {
+                bulletOut = false;
+            }
+            bulletTimer += 1;
+        }
 
 
         if (Input.GetKey(KeyCode.Space))
@@ -175,7 +177,6 @@ public class Player : MonoBehaviour
 
         if (sMoveType)
         {
-
             transform.Rotate(0, Input.GetAxis("Horizontal") * rotationSpeed, 0);
 
             float curSpeed = Input.GetAxis("Vertical") * speed;
@@ -184,10 +185,8 @@ public class Player : MonoBehaviour
         }
         else
         {
-
             if (cc.isGrounded)
             {
-
                 moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
 
                 transform.Rotate(0, Input.GetAxis("Horizontal") * rotationSpeed, 0);
@@ -195,8 +194,6 @@ public class Player : MonoBehaviour
                 moveDirection = transform.TransformDirection(moveDirection);
 
                 moveDirection *= speed;
-
-
 
                 if (Input.GetButtonDown("Jump"))
 
@@ -223,22 +220,10 @@ public class Player : MonoBehaviour
         inputV = Input.GetAxis("Vertical");
         anim.SetFloat("inputH", inputH);
         anim.SetFloat("inputV", inputV);
-       
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-
-            /*Cmd*/
-            Fire();
-
-
-        }
-
-
     }
 
     void SetCountText()
-    {
-       
+    {       
         Playerhealthtext.text = "Health" + health + "/3";
         Briefcasetext.text = " Briefcase " + Briefcase + "/3";
         itemText.text = "Item" + item + "/3";
@@ -248,25 +233,19 @@ public class Player : MonoBehaviour
 
         // if health equal to 0 player is dead 
         if (health <= 0)
-        {
-   
+        {   
             anim.SetTrigger("Death");
-            // end game texEt
-            Playerhealthtext.text = "your dead";
-             alive = false;
+            // End Game Text
+            Playerhealthtext.text = "You're dead";
+            alive = false;
             // Reset();
         }
-
-
-
     }
 
     private void OnTriggerStay(Collider other)
     {
-
         if (Input.GetKeyUp("y") && other.gameObject.CompareTag("itemMach"))
         {
-
             Debug.Log("hit");
             int randomDrop = Random.Range(0, 3);
             int randomPickup = Random.Range(0, pickups.Length - 1);
@@ -278,8 +257,6 @@ public class Player : MonoBehaviour
 
             }
         }
-
-
     }
 
     private void OnTriggerExit(Collider other)
@@ -289,11 +266,6 @@ public class Player : MonoBehaviour
             other.transform.parent.GetComponent<EnemyRandomMove>().see = true;
             Debug.Log("sees you exit");
         }
-
-
-
-
-
     }
 
 
@@ -327,9 +299,7 @@ public class Player : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             item = item + 1;
-            SetCountText();
-
-            
+            SetCountText();            
         }
 
         if (other.gameObject.CompareTag("Enemy"))
@@ -337,24 +307,19 @@ public class Player : MonoBehaviour
      
             health -= 1;
             SetCountText();
-
-
         }
 
     }
 
+    // Create Projectiles
     void Fire()
     {
-        /// create projectiles 
-        GameObject Bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-
-        Bullet.GetComponent<Rigidbody>().velocity = Bullet.transform.forward * 6.0f;
-
-        Destroy(Bullet, 2);
-
+        Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+        bulletOut = true;
+        bulletTimer = 0;
     }
 
-    //resets game 
+    // Resets game 
     void Reset()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

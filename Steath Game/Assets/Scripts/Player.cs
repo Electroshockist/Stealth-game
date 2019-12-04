@@ -105,11 +105,11 @@ public class Player : MonoBehaviour
         }
 
         //animate
-        //if (Input.GetKeyDown(KeyCode.W))
-        //{
-        //    anim.Play("walk", -1, 0f);
-        //    //anim.Play("WAIT00", -1, 0f);
-        //}
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            anim.Play("walk", -1, 0f);
+            //anim.Play("WAIT00", -1, 0f);
+        }
 
         if (Input.GetKey(KeyCode.Q))
         {
@@ -124,10 +124,12 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             anim.SetBool("run", true);
+            speed = 2;
         }
         else
         {
             anim.SetBool("run", false);
+            speed = 1;
         }
 
         if (Input.GetKeyDown(KeyCode.J) && !bulletOut)

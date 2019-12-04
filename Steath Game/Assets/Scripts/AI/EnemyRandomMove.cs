@@ -27,7 +27,7 @@ public class EnemyRandomMove : MonoBehaviour
 
         agent = GetComponent<NavMeshAgent>();
         animate = GetComponent<Animator>();
-        agent.speed = 10.2f;
+        agent.speed = 0.5f;
         animate.speed = 1.2f;
     }
 
@@ -46,7 +46,7 @@ public class EnemyRandomMove : MonoBehaviour
             {
                 state = "chase";
                 Debug.Log("chase");
-                agent.speed = 10.5f;
+                agent.speed = 0.5f;
                 animate.SetBool("isWalking", true);
 
 
@@ -104,7 +104,7 @@ public class EnemyRandomMove : MonoBehaviour
                 NavMesh.SamplePosition(transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
 
 
-                // if enemy is alerted it will follow player tracks  (Breadcrumb)
+                // if enemy is alerted it will follow player tracks  
                 if (alert)
                 {
                     NavMesh.SamplePosition(player.transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
@@ -115,7 +115,7 @@ public class EnemyRandomMove : MonoBehaviour
                     if (awareness > 20f)
                     {
                         alert = false;
-                        agent.speed = 10.2f;
+                        agent.speed = 5.2f;
                         animate.speed = 1.2f;
                         agent.SetDestination(navHit.position);
                         Debug.Log("im alert");
@@ -256,7 +256,7 @@ public class EnemyRandomMove : MonoBehaviour
                 animate.SetBool("isAttacking", true);
                 animate.SetBool("isWalking",false);
 
-                animate.speed = 1f;
+                animate.speed = 2f;
                 
                 
                 // enemy loses player
@@ -264,15 +264,15 @@ public class EnemyRandomMove : MonoBehaviour
                 print("Distance to other: " + distance);
 
                 //search
-                if (distance > 12f)
+                if (distance > 4f)
                 {
                     animate.SetBool("isWalking", true);
-                    animate.SetBool("isAttacking", true);
+                    animate.SetBool("isAttacking", false);
                     state = "somethingwrong";
                     Debug.Log("somethingwrong");
                 }
 
-                else if (distance < 12)
+                else if (distance < 2)
                 {
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)

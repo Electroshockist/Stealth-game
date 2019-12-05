@@ -12,7 +12,7 @@ public class PathFollowing : MonoBehaviour
     public Transform eyes;
     private NavMeshAgent agent;
     static Animator animate;
-
+    public GameObject gun;
 
     public Transform[] path;
     private float speed = 1.0f;
@@ -26,8 +26,8 @@ public class PathFollowing : MonoBehaviour
     public float starttimeshot;
 
 
-    public Transform bulletSpawn;
 
+    public Transform bulletSpawn;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -48,8 +48,10 @@ public class PathFollowing : MonoBehaviour
         //enemy will move towards curennnt path position
         Vector3 pos = Vector3.MoveTowards(transform.position, path[current].position, speed * Time.deltaTime);
 
-
+     
         transform.position = pos;
+
+        
 
         if (dist <= disreached)
         {
@@ -60,9 +62,9 @@ public class PathFollowing : MonoBehaviour
         {
 
             current = 0;
-
+      
         }
-
+        gun.gameObject.SetActive(false);
         animate.SetBool("isWalking", true);
         agent.SetDestination(path[current].transform.position);
 
@@ -90,7 +92,7 @@ public class PathFollowing : MonoBehaviour
                 Debug.Log("chase");
                 agent.speed = 1.0f;
                 animate.SetBool("isWalking", true);
-
+                gun.gameObject.SetActive(true);
 
             }
 
@@ -110,12 +112,13 @@ public class PathFollowing : MonoBehaviour
 
         if (player.GetComponent<Player>().alive)
         {
-            //animate.SetFloat("velocity", agent.velocity.magnitude);
+            animate.SetFloat("velocity", agent.velocity.magnitude);
             animate.SetBool("isWalking", true);
             //Idle
             if (state == "idle")
             {
                 Pathfollowing();
+                gun.gameObject.SetActive(false);
             }
 
             //walking 
@@ -128,6 +131,7 @@ public class PathFollowing : MonoBehaviour
                     state = "search";
                     wait = 5f;
                     Debug.Log("search");
+                    gun.gameObject.SetActive(false);
 
                 }
             }
@@ -141,10 +145,12 @@ public class PathFollowing : MonoBehaviour
                     animate.SetBool("isWalking", false);
                     wait -= Time.deltaTime;
                     transform.Rotate(0f, 120f * Time.deltaTime, 0f);
+                    gun.gameObject.SetActive(true);
                 }
                 else
                 {
                     state = "idle";
+                    gun.gameObject.SetActive(false);
                 }
             }
 
@@ -162,11 +168,12 @@ public class PathFollowing : MonoBehaviour
                 // enemy loses player
                 float distance = Vector3.Distance(transform.position, player.transform.position);
                 print("Distance to other: " + distance);
-
+                gun.gameObject.SetActive(true);
                 //search
                 if (distance > 4f)
                 {
                     state = "idle";
+                    gun.gameObject.SetActive(false);
                 }
 
                 else if (distance < 2)
@@ -177,6 +184,7 @@ public class PathFollowing : MonoBehaviour
                         agent.SetDestination(player.transform.position);
                         state = "kill";
                         Debug.Log("kill");
+                        gun.gameObject.SetActive(true);
                     }
 
                 }
@@ -191,10 +199,9 @@ public class PathFollowing : MonoBehaviour
             if (state == "kill")
             {
 
-                agent.SetDestination(player.transform.position);
+                agent.SetDestination(player.transform.position ) ;
 
-                animate.SetBool("isAttacking", true);
-                animate.SetBool("isWalking", false);
+               
 
                 animate.speed = 1f;
 
@@ -206,27 +213,24 @@ public class PathFollowing : MonoBehaviour
                 //search
                 if (distance > 4f)
                 {
-                    animate.SetBool("isWalking", true);
-                    animate.SetBool("isAttacking", true);
+                     animate.SetBool("isWalking", true);
+                    animate.SetBool("isAttacking", false);
                     state = "idle";
                 }
 
-                else if (distance < 2)
+                else if (distance < 4)
                 {
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)
                     {
                         animate.SetBool("isWalking", false);
                         animate.SetBool("isAttacking", true);
-                        state = "kill";
-                        Debug.Log("kill");
-
-
+                       
                         if (Bshoottime <= 0)
                         {
 
-
-                            Instantiate(projectile, transform.position, Quaternion.identity);
+                       
+                            Instantiate(projectile, eyes.position, eyes.rotation);
                             Bshoottime = starttimeshot;
                         }
                         else

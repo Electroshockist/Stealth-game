@@ -4,29 +4,51 @@ using UnityEngine;
 
 public class EProjectile : MonoBehaviour
 {
-    public float speed;
-    private Transform playerPos;
-    private Vector3 target;
 
+  
+    private Vector3 target;
+    private Player player;
+
+
+    public float projectileForce;
+    public float lifeTime;
+
+    Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-        target = new Vector3(playerPos.position.x, playerPos.position.y);
 
-        
+        //target = new Vector3(player.transform.position.x, player.transform.position.y);
+        if (projectileForce < 1.0f)
+        {
+            projectileForce = 2.0f;
+            Debug.LogWarning("ProjectileForce defaulting to " + projectileForce);
+        }
+
+        if (lifeTime < 1.0f)
+        {
+            lifeTime = 2.0f;
+            Debug.LogWarning("LifeTime defaulting to " + lifeTime);
+        }
+
+        rb = GetComponent<Rigidbody>();
+        if (!rb)
+        {
+            rb = gameObject.AddComponent<Rigidbody>();
+            //throw new System.ArgumentNullException("Nothing Entered");
+        }
+
+
+        rb.useGravity = false;
+        rb.AddForce(transform.forward * projectileForce, ForceMode.Impulse);
+        Destroy(gameObject, lifeTime);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed*Time.deltaTime);
-
-        if (transform.position.x == target.x && transform.position.y == target.y)
-        {
-
-            Destroy(gameObject);
-        }
+ 
     }
 
 
@@ -37,7 +59,7 @@ public class EProjectile : MonoBehaviour
     {
         if (c.gameObject.CompareTag("Player"))
         {
-
+      
             Destroy(gameObject);
         }
     }

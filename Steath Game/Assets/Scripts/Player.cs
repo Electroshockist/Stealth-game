@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             anim.SetBool("run", true);
-            speed = 2;
+            speed = 4;
         }
         else
         {

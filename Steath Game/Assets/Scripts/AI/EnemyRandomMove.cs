@@ -10,7 +10,6 @@ public class EnemyRandomMove : MonoBehaviour
     
     public List<GameObject> enemy;
     public int totalenemy = 10;
-    public GameObject[] pickups;
     public GameObject player;
     public int enemyhealth = 1;
     public Transform eyes;
@@ -81,6 +80,7 @@ public class EnemyRandomMove : MonoBehaviour
         {
             CheckPlayerinsight();
         }
+ 
 
 
       if (enemyhealth <= 0)
@@ -253,8 +253,7 @@ public class EnemyRandomMove : MonoBehaviour
 
                 agent.SetDestination(player.transform.position);
 
-                animate.SetBool("isAttacking", true);
-                animate.SetBool("isWalking",false);
+          
 
                 animate.speed = 2f;
                 
@@ -264,7 +263,7 @@ public class EnemyRandomMove : MonoBehaviour
                 print("Distance to other: " + distance);
 
                 //search
-                if (distance > 4f)
+                if (distance > 1f)
                 {
                     animate.SetBool("isWalking", true);
                     animate.SetBool("isAttacking", false);
@@ -272,13 +271,14 @@ public class EnemyRandomMove : MonoBehaviour
                     Debug.Log("somethingwrong");
                 }
 
-                else if (distance < 2)
+                else if (distance < 1.0f)
                 {
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)
                     {
-                        animate.SetBool("isWalking", false);
+                       
                         animate.SetBool("isAttacking", true);
+                        animate.SetBool("isWalking", false);
                         state = "kill";
                         Debug.Log("kill");
                     }
@@ -286,10 +286,7 @@ public class EnemyRandomMove : MonoBehaviour
                 }
 
             }
-            else 
-            {
-                animate.SetBool("isAttacking", false);
-            }
+        
         }
     }
 

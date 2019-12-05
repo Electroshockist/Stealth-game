@@ -15,22 +15,18 @@ public class RobotPathFollow : MonoBehaviour
 
 
     public Transform[] path;
-    private float speed = 1.0f;
+    private float speed = 2.0f;
     private int current = 0;
     private float disreached = 1.0f;
     public bool seeyou = false;
 
 
 
-
-
-    public Transform bulletSpawn;
-
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animate = GetComponent<Animator>();
-        agent.speed = 1.0f;
+        agent.speed = 2.0f;
         animate.speed = 1.2f;
         //Bshoottime = starttimeshot;
         state = "idle";
@@ -78,7 +74,7 @@ public class RobotPathFollow : MonoBehaviour
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         Debug.DrawRay(eyes.position, fwd, Color.red);
 
-        if (Physics.Linecast(eyes.position, fwd * 6.0f, out rayHit))
+        if (Physics.Linecast(eyes.position, fwd * 2.0f, out rayHit))
         {
 
             if (rayHit.collider.gameObject.tag == "Player")
@@ -86,7 +82,7 @@ public class RobotPathFollow : MonoBehaviour
 
                 state = "chase";
                 Debug.Log("chase");
-                agent.speed = 1.0f;
+                agent.speed = 2.0f;
                 animate.SetBool("isWalking", true);
 
 
@@ -108,7 +104,7 @@ public class RobotPathFollow : MonoBehaviour
 
         if (player.GetComponent<Player>().alive)
         {
-            //animate.SetFloat("velocity", agent.velocity.magnitude);
+            animate.SetFloat("velocity", agent.velocity.magnitude);
             animate.SetBool("isWalking", true);
             //Idle
             if (state == "idle")
@@ -194,7 +190,7 @@ public class RobotPathFollow : MonoBehaviour
                 animate.SetBool("isAttacking", true);
                 animate.SetBool("isWalking", false);
 
-                animate.speed = 1f;
+                animate.speed = 2.0f;
 
 
                 // enemy loses player

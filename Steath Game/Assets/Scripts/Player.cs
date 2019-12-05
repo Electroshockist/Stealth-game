@@ -51,7 +51,6 @@ public class Player : MonoBehaviour
     CharacterController cc;
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
-    public Transform enemy;
 
     public enum PlayerState { Idle, Walking, Attacking };
     public PlayerState state = PlayerState.Idle;
@@ -265,7 +264,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.name == "eyes")
         {
-            other.transform.parent.GetComponent<EnemyRandomMove>().see = true;
+           other.transform.parent.GetComponent<EnemyRandomMove>().see = true;
             Debug.Log("sees you exit");
         }
     }
@@ -307,6 +306,14 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
      
+            health -= 1;
+            SetCountText();
+        }
+
+
+        if (other.gameObject.CompareTag("EBullet"))
+        {
+
             health -= 1;
             SetCountText();
         }

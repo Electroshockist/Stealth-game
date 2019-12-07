@@ -30,7 +30,7 @@ public class SpacialPartition : MonoBehaviour {
         }
     }
 
-    public float mapSize;
+    public static float mapSize;
     public static int divisions;
     public Vector3 position;
     public static List<List<List<Node3D>>> nodes;
@@ -46,16 +46,16 @@ public class SpacialPartition : MonoBehaviour {
     }
 
     void setup() {
-        float divisionSize = divisions / mapSize;
-        List<List<Node3D>> face = new List<List<Node3D>>();
+        float divisionSize =  mapSize / divisions;
         for(int i = 0; i < divisions; i++) {
-            List<Node3D> colomn = new List<Node3D>();
+			List<List<Node3D>> face = new List<List<Node3D>>();
             for(int j = 0; j < divisions; j++) {
+				List<Node3D> colomn = new List<Node3D>();
                 for(int k = 0; k < divisions; k++) {
                     Vector3 pos = new Vector3(
-                        i * divisionSize,
-                        j * divisionSize,
-                        k * divisionSize
+                        i * divisionSize + position.x,
+                        j * divisionSize + position.y,
+                        k * divisionSize + position.z
                         );
                     colomn.Add(new Node3D(pos));
                 }
@@ -66,26 +66,26 @@ public class SpacialPartition : MonoBehaviour {
     }
 
     public static List<Node> getNeighbours(Node3D node) {
-
+		float divisionSize =  mapSize / divisions;
         NeighbourHelper setNeigbours = (n) => {
             List<Node> neighbours = new List<Node>();
 
-            Vector3 temp = new Vector3(n.position.x + divisions, n.position.y, n.position.z);
+            Vector3 temp = new Vector3(n.position.x + divisionSize, n.position.y, n.position.z);
             neighbours.Add(getNodeByPosition(temp));
 
-            temp = new Vector3(n.position.x - divisions, n.position.y, n.position.z);
+            temp = new Vector3(n.position.x - divisionSize, n.position.y, n.position.z);
             neighbours.Add(getNodeByPosition(temp));
 
-            temp = new Vector3(n.position.x, n.position.y + divisions, n.position.z);
+            temp = new Vector3(n.position.x, n.position.y + divisionSize, n.position.z);
             neighbours.Add(getNodeByPosition(temp));
 
-            temp = new Vector3(n.position.x, n.position.y - divisions, n.position.z);
+            temp = new Vector3(n.position.x, n.position.y - divisionSize, n.position.z);
             neighbours.Add(getNodeByPosition(temp));
 
-            temp = new Vector3(n.position.x, n.position.y, n.position.z + divisions);
+            temp = new Vector3(n.position.x, n.position.y, n.position.z + divisionSize);
             neighbours.Add(getNodeByPosition(temp));
 
-            temp = new Vector3(n.position.x, n.position.y, n.position.z - divisions);
+            temp = new Vector3(n.position.x, n.position.y, n.position.z - divisionSize);
             neighbours.Add(getNodeByPosition(temp));
 
             return neighbours;

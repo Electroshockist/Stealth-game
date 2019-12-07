@@ -11,7 +11,7 @@ public class EnemyRandomMove : MonoBehaviour
     public List<GameObject> enemy;
     public int totalenemy = 10;
     public GameObject player;
-    public int enemyhealth = 1;
+   private int enemyhealth = 4;
     public Transform eyes;
     private NavMeshAgent agent;
     static Animator animate;
@@ -23,7 +23,7 @@ public class EnemyRandomMove : MonoBehaviour
 
     void Start()
     {
-
+        
         agent = GetComponent<NavMeshAgent>();
         animate = GetComponent<Animator>();
         agent.speed = 0.5f;
@@ -263,7 +263,7 @@ public class EnemyRandomMove : MonoBehaviour
                 print("Distance to other: " + distance);
 
                 //search
-                if (distance > 1f)
+                if (distance > 2f)
                 {
                     animate.SetBool("isWalking", true);
                     animate.SetBool("isAttacking", false);
@@ -293,6 +293,9 @@ public class EnemyRandomMove : MonoBehaviour
     //die//
     public void death()
     {
+
+
+        animate.SetTrigger("Dead");
         animate.speed = 1f;
 
 
@@ -300,13 +303,12 @@ public class EnemyRandomMove : MonoBehaviour
 
         enemy.Remove(gameObject);
 
-        totalenemy--;
-        Respawn();
-        animate.SetTrigger("Dead");
+        //totalenemy--;
+        //Respawn();
+      
     }
 
 
-    //enemy respawn 
     void Respawn()
     {
         totalenemy++;

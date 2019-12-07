@@ -821,14 +821,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab9bfb80756f8b48a68e5ad2bdf21dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 3860601963255676436, guid: 7bbc44557af9e314694665533d265aff, type: 3}
   badguyhealth: 1
   eyes: {fileID: 4922044430709313923}
   path:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8146052896918984984, guid: afbd893985f58ee48bff7403dbe26315, type: 3}
+  - {fileID: 6677117617756109401, guid: 4d855e20234c8d5468961802488cf545, type: 3}
+  - {fileID: 8183274395536039502, guid: 7a41a93fa4c1c094facab1ef2ae66260, type: 3}
   seeyou: 0
-  bulletSpawn: {fileID: 0}
 --- !u!1 &4074129958646386845
 GameObject:
   m_ObjectHideFlags: 0

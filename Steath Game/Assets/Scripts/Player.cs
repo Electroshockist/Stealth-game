@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     public Transform[] spawnPointsTransform;
 
 
-
+    public EnemyRandomMove enemy;
 
     //game objects 
     public int Briefcase = 0;
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
     public PlayerState state = PlayerState.Idle;
 
 
-
+   public  Scenemanager scenemanager;
     // Start is called before the first frame update
     void Start()
     {
@@ -209,12 +209,8 @@ public class Player : MonoBehaviour
 
         RaycastHit hit;
 
-        Debug.DrawRay(transform.position, transform.forward * 5.0f, Color.red);
+        Debug.DrawRay(transform.position, transform.forward * 2.0f, Color.red);
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 5.0f))
-        {
-            //Debug.Log(hit.collider.name);
-        }
 
         //animate
         inputH = Input.GetAxis("Horizontal");
@@ -228,8 +224,7 @@ public class Player : MonoBehaviour
         Playerhealthtext.text = "Health" + health + "/3";
         Briefcasetext.text = " Briefcase " + Briefcase + "/3";
         itemText.text = "Item" + item + "/3";
-        //winText.text = "YOU WIN";
-        // Debug.Log(count.ToString());
+
 
 
         // if health equal to 0 player is dead 
@@ -239,8 +234,12 @@ public class Player : MonoBehaviour
             // End Game Text
             Playerhealthtext.text = "You're dead";
             alive = false;
-            // Reset();
+             GameOver();
+
         }
+
+
+      
     }
 
     private void OnTriggerStay(Collider other)
@@ -292,6 +291,11 @@ public class Player : MonoBehaviour
 
             // Run the 'SetCountText()' function (see below)
             SetCountText();
+
+            if (Briefcase == 3)
+            {
+                scenemanager.Load();
+            }
         }
 
 
@@ -328,11 +332,14 @@ public class Player : MonoBehaviour
         bulletTimer = 0;
     }
 
-    // Resets game 
-    void Reset()
+    //// Resets game 
+    void GameOver()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Start");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+
 
 
 }

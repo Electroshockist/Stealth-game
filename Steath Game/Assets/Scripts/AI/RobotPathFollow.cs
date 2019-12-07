@@ -13,7 +13,7 @@ public class RobotPathFollow : MonoBehaviour
     private NavMeshAgent agent;
     static Animator animate;
 
-
+    randompos randompos;
     public Transform[] path;
     private float speed = 2.0f;
     private int current = 0;
@@ -47,6 +47,7 @@ public class RobotPathFollow : MonoBehaviour
 
         if (dist <= disreached)
         {
+          
             current++;
         }
 
@@ -74,7 +75,7 @@ public class RobotPathFollow : MonoBehaviour
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         Debug.DrawRay(eyes.position, fwd, Color.red);
 
-        if (Physics.Linecast(eyes.position, fwd * 2.0f, out rayHit))
+        if (Physics.Linecast(eyes.position, fwd * 6.0f, out rayHit))
         {
 
             if (rayHit.collider.gameObject.tag == "Player")
@@ -82,9 +83,9 @@ public class RobotPathFollow : MonoBehaviour
 
                 state = "chase";
                 Debug.Log("chase");
-                agent.speed = 2.0f;
+                agent.speed = 1.0f;
                 animate.SetBool("isWalking", true);
-
+     
 
             }
 
@@ -101,6 +102,10 @@ public class RobotPathFollow : MonoBehaviour
 
         CheckPlayerinsight();
 
+        if (badguyhealth <= 0)
+        {
+            death();
+        }
 
         if (player.GetComponent<Player>().alive)
         {
@@ -187,10 +192,8 @@ public class RobotPathFollow : MonoBehaviour
 
                 agent.SetDestination(player.transform.position);
 
-                animate.SetBool("isAttacking", true);
-                animate.SetBool("isWalking", false);
 
-                animate.speed = 2.0f;
+                animate.speed = 1.0f;
 
 
                 // enemy loses player
@@ -198,14 +201,14 @@ public class RobotPathFollow : MonoBehaviour
                 print("Distance to other: " + distance);
 
                 //search
-                if (distance > 4f)
+                if (distance > 2f)
                 {
                     animate.SetBool("isWalking", true);
-                    animate.SetBool("isAttacking", true);
+                    animate.SetBool("isAttacking", false);
                     state = "idle";
                 }
 
-                else if (distance < 2)
+                else if (distance < 1)
                 {
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)
@@ -221,14 +224,21 @@ public class RobotPathFollow : MonoBehaviour
                 }
 
             }
-            else
-            {
-                animate.SetBool("isAttacking", false);
-            }
+      
         }
 
     }
 
+    public void death()
+    {
+        animate.speed = 1f;
+
+
+        agent.gameObject.SetActive(false);
+
+
+        animate.SetTrigger("Dead");
+    }
 
 
     void OnTriggerEnter(Collider other)

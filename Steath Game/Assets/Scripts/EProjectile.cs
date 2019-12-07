@@ -50,17 +50,4 @@ public class EProjectile : MonoBehaviour
     {
  
     }
-
-
-
-   
-
-    void OnCollisionEnter(Collision c)
-    {
-        if (c.gameObject.CompareTag("Player"))
-        {
-      
-            Destroy(gameObject);
-        }
-    }
 }

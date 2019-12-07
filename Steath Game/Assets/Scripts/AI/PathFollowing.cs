@@ -106,6 +106,7 @@ public class PathFollowing : MonoBehaviour
     {
 
         CheckPlayerinsight();
+  
 
         if (player.GetComponent<Player>().alive)
         {

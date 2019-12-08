@@ -3,7 +3,12 @@ guid: 0fb909190596b9345a8f6e29f769d386
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blueJay
+    second: {fileID: 2100000, guid: 86d6b1f3fda600f408c20cacaa7aa231, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -16,17 +16,15 @@ public class Flock : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        for (int i = 0; i < boidsList.Capacity; i++)
+        if (other.tag == "Player")
         {
-            boids[i].GetComponent<Boid>().flock = this;
-            boids[i].GetComponent<Boid>().StartFly();
+            for (int i = 0; i < boidsList.Capacity; i++)
+            {
+                boids[i].GetComponent<Boid>().flock = this;
+                boids[i].GetComponent<Boid>().StartFly();
+            }
         }
     }
 

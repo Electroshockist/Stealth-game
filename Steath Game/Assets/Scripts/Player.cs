@@ -248,9 +248,9 @@ public class Player : MonoBehaviour
         {
             Debug.Log("hit");
             int randomDrop = Random.Range(0, 3);
-            int randomPickup = Random.Range(0, pickups.Length - 1);
+            int randomPickup = Random.Range(0, pickups.Length );
 
-            if (randomDrop < 4)
+            if (randomDrop < 2)
             {
                 Debug.Log("drop");
                 Instantiate(pickups[randomPickup], spawnPointsTransform[randomPickup].position, spawnPointsTransform[randomPickup].rotation);

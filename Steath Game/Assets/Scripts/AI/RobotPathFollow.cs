@@ -21,13 +21,13 @@ public class RobotPathFollow : MonoBehaviour
     public bool seeyou = false;
 
 
-
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animate = GetComponent<Animator>();
-        agent.speed = 2.0f;
-        animate.speed = 1.2f;
+        speed = 0.2f;
+         agent.speed = 1.0f;
+        animate.speed = 0.5f;
         //Bshoottime = starttimeshot;
         state = "idle";
     }
@@ -60,7 +60,7 @@ public class RobotPathFollow : MonoBehaviour
 
         animate.SetBool("isWalking", true);
         agent.SetDestination(path[current].transform.position);
-
+ 
 
         state = "Walk";
 
@@ -73,9 +73,9 @@ public class RobotPathFollow : MonoBehaviour
 
         RaycastHit rayHit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(eyes.position, fwd, Color.red);
+        Debug.DrawRay(eyes.position, fwd * 2f, Color.red);
 
-        if (Physics.Linecast(eyes.position, fwd * 6.0f, out rayHit))
+        if (Physics.Linecast(eyes.position, fwd * 2.0f, out rayHit))
         {
 
             if (rayHit.collider.gameObject.tag == "Player")
@@ -83,7 +83,7 @@ public class RobotPathFollow : MonoBehaviour
 
                 state = "chase";
                 Debug.Log("chase");
-                agent.speed = 1.0f;
+                agent.speed = 0.5f;
                 animate.SetBool("isWalking", true);
      
 
@@ -106,7 +106,9 @@ public class RobotPathFollow : MonoBehaviour
         {
             death();
         }
-
+     
+       
+       
         if (player.GetComponent<Player>().alive)
         {
             animate.SetFloat("velocity", agent.velocity.magnitude);
@@ -126,7 +128,9 @@ public class RobotPathFollow : MonoBehaviour
                     animate.SetBool("isWalking", true);
                     state = "search";
                     wait = 5f;
+                    speed = 0.5f;
                     Debug.Log("search");
+                    agent.speed = 0.5f;
 
                 }
             }
@@ -193,7 +197,7 @@ public class RobotPathFollow : MonoBehaviour
                 agent.SetDestination(player.transform.position);
 
 
-                animate.speed = 1.0f;
+                agent.speed = 1f;
 
 
                 // enemy loses player
@@ -231,10 +235,10 @@ public class RobotPathFollow : MonoBehaviour
 
     public void death()
     {
-        animate.speed = 1f;
+        agent.speed = 0.5f;
 
 
-        agent.gameObject.SetActive(false);
+        gameObject.SetActive(false);
 
 
         animate.SetTrigger("Dead");

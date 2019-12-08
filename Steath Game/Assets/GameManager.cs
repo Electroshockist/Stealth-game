@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
     public GameObject[] spawningPoints;
     public GameObject[] Badguy;
     public GameObject player;
-
+    public EnemyRandomMove enemy;
+    public RobotPathFollow robot;
+    public PathFollowing badguy2;
     NavMeshAgent navMeshAgent;
     public Transform[] spawnPointsTransform;
     // Use this for initialization
@@ -25,8 +27,10 @@ public class GameManager : MonoBehaviour
             int spawnPointIndex = Random.Range(0, spawningPoints.Length);
             ////creates enemys then spawn them 
 
-            Instantiate(Badguy[0], spawnPointsTransform[spawnPointIndex].position, spawnPointsTransform[spawnPointIndex].rotation);
-
+            if (enemy.enemyhealth < 0 )
+            {
+                Instantiate(Badguy[0], spawnPointsTransform[spawnPointIndex].position, spawnPointsTransform[spawnPointIndex].rotation);
+            }
 
 
             yield return new WaitForSeconds(10f);

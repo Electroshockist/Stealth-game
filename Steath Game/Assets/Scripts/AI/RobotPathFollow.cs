@@ -13,7 +13,7 @@ public class RobotPathFollow : MonoBehaviour
     private NavMeshAgent agent;
     static Animator animate;
 
-    randompos randompos;
+
     public Transform[] path;
     private float speed = 2.0f;
     private int current = 0;
@@ -73,9 +73,9 @@ public class RobotPathFollow : MonoBehaviour
 
         RaycastHit rayHit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(eyes.position, fwd * 2f, Color.red);
+        Debug.DrawRay(eyes.position, fwd * 0.8f, Color.red);
 
-        if (Physics.Linecast(eyes.position, fwd * 2.0f, out rayHit))
+        if (Physics.Linecast(player.transform.position, fwd * 0.8f, out rayHit))
         {
 
             if (rayHit.collider.gameObject.tag == "Player")
@@ -169,6 +169,7 @@ public class RobotPathFollow : MonoBehaviour
                 //search
                 if (distance > 4f)
                 {
+                    agent.speed = 0.5f;
                     state = "idle";
                 }
 
@@ -177,6 +178,7 @@ public class RobotPathFollow : MonoBehaviour
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)
                     {
+                        agent.speed = 1.0f;
                         agent.SetDestination(player.transform.position);
                         state = "kill";
                         Debug.Log("kill");

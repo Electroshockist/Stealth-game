@@ -36,15 +36,16 @@ public class EnemyRandomMove : MonoBehaviour
 
         RaycastHit rayHit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(eyes.position, fwd * 2.0f, Color.red);
+        Debug.DrawRay(eyes.position, fwd * 0.5f, Color.red);
 
-        if (Physics.Linecast(eyes.position, fwd * 2f, out rayHit))
+        if (Physics.Linecast(eyes.position, fwd * 0.5f, out rayHit))
         {
 
             if (rayHit.collider.gameObject.tag == "Player")
             {
                 state = "chase";
                 Debug.Log("chase");
+                agent.SetDestination(player.transform.position);
                 agent.speed = 0.5f;
                 animate.SetBool("isWalking", true);
 
@@ -74,16 +75,16 @@ public class EnemyRandomMove : MonoBehaviour
  
     void Update()
 
-    {
+    {   CheckPlayerinsight();
 
         if (see == true)
         {
-            CheckPlayerinsight();
+         
         }
- 
 
 
-      if (enemyhealth <= 0)
+
+        if (enemyhealth <= 0)
         {
             death();
         }
@@ -96,11 +97,11 @@ public class EnemyRandomMove : MonoBehaviour
             if (state == "idle")
             {
                 Debug.Log(state);
-                //walk randomly within 90f; 
-                Vector3 randomPos = Random.insideUnitCircle * awareness;
+                //walk randomly within 20f; 
+                Vector3 randomPos = Random.insideUnitSphere * awareness;
                 NavMeshHit navHit;
                 animate.SetBool("isWalking", true);
-                /// enemy finds random place wiith 90f to walk around on nav mesh 
+                /// enemy finds random place wiith 20f to walk around on nav mesh 
                 NavMesh.SamplePosition(transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
 
 
@@ -172,13 +173,13 @@ public class EnemyRandomMove : MonoBehaviour
                 print("Distance to other: " + distance);
 
                 //search
-                if (distance > 10f)
+                if (distance > 4f)
                 {
                     state = "somethingwrong";
                     Debug.Log("somethingwrong");
                 }
 
-              else  if (distance< 10)
+              else  if (distance< 1)
                 {
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)

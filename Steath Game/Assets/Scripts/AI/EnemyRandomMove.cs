@@ -11,7 +11,7 @@ public class EnemyRandomMove : MonoBehaviour
     public List<GameObject> enemy;
     public int totalenemy = 10;
     public GameObject player;
-   private int enemyhealth = 4;
+    public int enemyhealth = 4;
     public Transform eyes;
     private NavMeshAgent agent;
     static Animator animate;
@@ -36,9 +36,9 @@ public class EnemyRandomMove : MonoBehaviour
 
         RaycastHit rayHit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(eyes.position, fwd, Color.red);
+        Debug.DrawRay(eyes.position, fwd * 2.0f, Color.red);
 
-        if (Physics.Linecast(eyes.position, fwd * 20.0f, out rayHit))
+        if (Physics.Linecast(eyes.position, fwd * 2f, out rayHit))
         {
 
             if (rayHit.collider.gameObject.tag == "Player")
@@ -96,11 +96,11 @@ public class EnemyRandomMove : MonoBehaviour
             if (state == "idle")
             {
                 Debug.Log(state);
-                //walk randomly within 20f;
-                Vector3 randomPos = Random.insideUnitSphere * awareness;
+                //walk randomly within 90f; 
+                Vector3 randomPos = Random.insideUnitCircle * awareness;
                 NavMeshHit navHit;
                 animate.SetBool("isWalking", true);
-                /// enemy finds random place wiith 20f to walk around on nav mesh 
+                /// enemy finds random place wiith 90f to walk around on nav mesh 
                 NavMesh.SamplePosition(transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
 
 
@@ -298,8 +298,6 @@ public class EnemyRandomMove : MonoBehaviour
         animate.SetTrigger("Dead");
         animate.speed = 1f;
 
-
-        agent.gameObject.SetActive(false);
 
         enemy.Remove(gameObject);
 

@@ -79,9 +79,9 @@ public class PathFollowing : MonoBehaviour
 
         RaycastHit rayHit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(eyes.position, fwd, Color.red);
+        Debug.DrawRay(eyes.position, fwd * 2.0f, Color.red);
 
-        if (Physics.Linecast(eyes.position, fwd * 6.0f, out rayHit))
+        if (Physics.Linecast(eyes.position, fwd * 2.0f, out rayHit))
         {
 
             if (rayHit.collider.gameObject.tag == "Player")
@@ -262,7 +262,7 @@ public class PathFollowing : MonoBehaviour
         animate.speed = 1f;
 
 
-        agent.gameObject.SetActive(false);
+        gameObject.SetActive(false); 
 
       
         animate.SetTrigger("Dead");

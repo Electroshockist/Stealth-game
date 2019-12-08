@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     public Transform[] spawnPointsTransform;
 
 
-    public EnemyRandomMove enemy;
+    public EnemyRandomMove[] enemy;
 
     //game objects 
     public int Briefcase = 0;
@@ -257,27 +257,23 @@ public class Player : MonoBehaviour
 
             }
         }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.name == "eyes")
+
+        if (other.gameObject.CompareTag("Enemy"))
         {
-           other.transform.parent.GetComponent<EnemyRandomMove>().see = true;
-            Debug.Log("sees you exit");
+
+            health -= 1;
+            SetCountText();
         }
     }
+
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "eyes")
-        {
-            other.transform.parent.GetComponent<EnemyRandomMove>().see = true;
-            Debug.Log("sees you enter ");
-        }
+     
 
-      
+
 
         // ..and if the game object we intersect has the tag 'Pick Up' assigned to it..
         if (other.gameObject.CompareTag("Case"))
@@ -307,12 +303,7 @@ public class Player : MonoBehaviour
             SetCountText();            
         }
 
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-     
-            health -= 1;
-            SetCountText();
-        }
+  
 
 
         if (other.gameObject.CompareTag("EBullet"))

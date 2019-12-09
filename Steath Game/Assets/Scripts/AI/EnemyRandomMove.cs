@@ -116,8 +116,8 @@ public class EnemyRandomMove : MonoBehaviour
                     if (awareness > 20f)
                     {
                         alert = false;
-                        agent.speed = 5.2f;
-                        animate.speed = 1.2f;
+                        agent.speed = 2.2f;
+                      
                         agent.SetDestination(navHit.position);
                         Debug.Log("im alert");
                     }
@@ -137,7 +137,7 @@ public class EnemyRandomMove : MonoBehaviour
                     state = "search";
                     wait = 5f;
                     Debug.Log("search");
-
+                    agent.speed = 0.2f;
                 }
             }
 
@@ -150,6 +150,7 @@ public class EnemyRandomMove : MonoBehaviour
                     animate.SetBool("isWalking", false);
                     wait -= Time.deltaTime;
                     transform.Rotate(0f, 120f * Time.deltaTime, 0f);
+                    agent.speed = 0.5f;
                 }
                 else
                 {
@@ -175,6 +176,7 @@ public class EnemyRandomMove : MonoBehaviour
                 //search
                 if (distance > 4f)
                 {
+                    agent.speed = 0.2f;
                     state = "somethingwrong";
                     Debug.Log("somethingwrong");
                 }
@@ -184,6 +186,7 @@ public class EnemyRandomMove : MonoBehaviour
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)
                     {
+                        agent.speed = 0.7f;
                         agent.SetDestination(player.transform.position);
                         state = "kill";
                         Debug.Log("kill");
@@ -211,7 +214,7 @@ public class EnemyRandomMove : MonoBehaviour
                 float distance = Vector3.Distance(transform.position, player.transform.position);
                 print("Distance to other: " + distance);
                Vector3 enemyMove = Vector3.zero;
-
+                agent.speed = 1.0f;
                 if (distance > 1f)
                 {
                     if (enemypos.x > player.transform.position.x)
@@ -237,8 +240,8 @@ public class EnemyRandomMove : MonoBehaviour
                     {
                         animate.SetBool("isWalking", true);
                         state = "search";
-                   
-                        wait = 5f;
+                    agent.speed = 0.5f;
+                    wait = 5f;
                         alert = true;
                         awareness = 5f;
                 
@@ -300,16 +303,12 @@ public class EnemyRandomMove : MonoBehaviour
         animate.speed = 1f;
 
 
-        enemy.Remove(gameObject);
+        gameObject.SetActive(false);
 
-        //totalenemy--;
-        //Respawn();
+   
       
     }
 
 
-    void Respawn()
-    {
-        totalenemy++;
-    }
+  
 }

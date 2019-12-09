@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
 
 
     //player health
-    public int health = 3;
+    public int health = 10;
 
 
     public GameObject[] pickups;
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
     public PlayerState state = PlayerState.Idle;
 
 
-   public  Scenemanager scenemanager;
+    public Scenemanager scenemanager;
     // Start is called before the first frame update
     void Start()
     {
@@ -85,9 +85,9 @@ public class Player : MonoBehaviour
             sMoveType = !sMoveType;
         }
 
-        if (health >= 3)
+        if (health >= 10)
         {
-            health = 3;
+            health = 10;
             SetCountText();
         }
 
@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             anim.SetBool("run", true);
-            speed = 4;
+            speed = 1.5f;
         }
         else
         {
@@ -146,7 +146,7 @@ public class Player : MonoBehaviour
 
         if (bulletOut)
         {
-            if(bulletTimer == 5)
+            if (bulletTimer == 5)
             {
                 bulletOut = false;
             }
@@ -220,8 +220,8 @@ public class Player : MonoBehaviour
     }
 
     void SetCountText()
-    {       
-        Playerhealthtext.text = "Health" + health + "/3";
+    {
+        Playerhealthtext.text = "Health" + health + "/10";
         Briefcasetext.text = " Briefcase " + Briefcase + "/3";
         itemText.text = "Item" + item + "/3";
 
@@ -229,17 +229,17 @@ public class Player : MonoBehaviour
 
         // if health equal to 0 player is dead 
         if (health <= 0)
-        {   
+        {
             anim.SetTrigger("Death");
             // End Game Text
             Playerhealthtext.text = "You're dead";
             alive = false;
-             GameOver();
+            GameOver();
 
         }
 
 
-      
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -248,7 +248,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("hit");
             int randomDrop = Random.Range(0, 3);
-            int randomPickup = Random.Range(0, pickups.Length );
+            int randomPickup = Random.Range(0, pickups.Length);
 
             if (randomDrop < 2)
             {
@@ -259,7 +259,11 @@ public class Player : MonoBehaviour
         }
 
 
-        if (other.gameObject.CompareTag("Enemy"))
+
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
         {
 
             health -= 1;
@@ -271,8 +275,8 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-     
 
+      
 
 
         // ..and if the game object we intersect has the tag 'Pick Up' assigned to it..

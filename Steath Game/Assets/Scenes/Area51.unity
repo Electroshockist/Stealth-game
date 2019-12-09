@@ -164,8 +164,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -998,8 +998,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -1307,8 +1307,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -1416,8 +1416,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -1728,8 +1728,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -2018,7 +2018,7 @@ PrefabInstance:
     - target: {fileID: 8974881695393099498, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: player
-      value: 
+      value:
       objectReference: {fileID: 1631072298}
     - target: {fileID: 8974881695393099500, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
@@ -2088,27 +2088,27 @@ PrefabInstance:
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: Badguy.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 124566253}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: Badguy.Array.data[1]
-      value: 
+      value:
       objectReference: {fileID: 661099590}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: Badguy.Array.data[2]
-      value: 
+      value:
       objectReference: {fileID: 661099590}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: Badguy.Array.data[3]
-      value: 
+      value:
       objectReference: {fileID: 1070393546}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: player
-      value: 
+      value:
       objectReference: {fileID: 1070393546}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
@@ -2118,50 +2118,50 @@ PrefabInstance:
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: badguy2
-      value: 
+      value:
       objectReference: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: enemy
-      value: 
+      value:
       objectReference: {fileID: 7179474861876746552, guid: ee333b5f8970fa44087f8632360b1c88,
         type: 3}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: robot
-      value: 
+      value:
       objectReference: {fileID: 4922044429361348441, guid: ea33e2976717be649bc7254e642627d0,
         type: 3}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: spawnPointsTransform.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2089538309}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: spawnPointsTransform.Array.data[1]
-      value: 
+      value:
       objectReference: {fileID: 73513585}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: spawnPointsTransform.Array.data[2]
-      value: 
+      value:
       objectReference: {fileID: 1706959590}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: spawningPoints.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 1388909543}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: spawningPoints.Array.data[1]
-      value: 
+      value:
       objectReference: {fileID: 847268862}
     - target: {fileID: 8974881695393099499, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3,
         type: 3}
       propertyPath: spawningPoints.Array.data[2]
-      value: 
+      value:
       objectReference: {fileID: 109943812}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ea5385d7816b1b4c8c47fdaf5fcd8a3, type: 3}
@@ -2209,8 +2209,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -2421,8 +2421,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -2530,8 +2530,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -3269,8 +3269,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -3570,8 +3570,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -3679,8 +3679,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -3764,7 +3764,7 @@ PrefabInstance:
     - target: {fileID: 7179474861876746552, guid: ee333b5f8970fa44087f8632360b1c88,
         type: 3}
       propertyPath: player
-      value: 
+      value:
       objectReference: {fileID: 1631072296}
     - target: {fileID: 7179474861876746552, guid: ee333b5f8970fa44087f8632360b1c88,
         type: 3}
@@ -3872,8 +3872,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -3981,8 +3981,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -4090,8 +4090,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -4199,8 +4199,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -4468,8 +4468,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &267133056
 GameObject:
   m_ObjectHideFlags: 0
@@ -4514,8 +4514,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -4819,8 +4819,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -4946,8 +4946,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -5067,8 +5067,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -5285,8 +5285,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -5394,8 +5394,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -5697,8 +5697,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -6167,8 +6167,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &382683565
 GameObject:
   m_ObjectHideFlags: 0
@@ -6213,8 +6213,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -6630,8 +6630,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -6854,8 +6854,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -7040,8 +7040,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -7149,8 +7149,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -7950,8 +7950,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -8059,8 +8059,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -8168,8 +8168,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -8277,8 +8277,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -8948,7 +8948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300004, guid: 557cc767631fc1d4ba851e8a99ea9628, type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: 46e3cb17c8ebaa44daf93571a9e38162, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 557cc767631fc1d4ba851e8a99ea9628, type: 3}
@@ -9119,8 +9119,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -9228,8 +9228,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -9325,7 +9325,7 @@ PrefabInstance:
     - target: {fileID: 7179474861876746552, guid: ee333b5f8970fa44087f8632360b1c88,
         type: 3}
       propertyPath: player
-      value: 
+      value:
       objectReference: {fileID: 1631072296}
     - target: {fileID: 7179474861876746552, guid: ee333b5f8970fa44087f8632360b1c88,
         type: 3}
@@ -9439,8 +9439,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -9651,8 +9651,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -9766,8 +9766,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -10058,8 +10058,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -10452,8 +10452,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -10847,8 +10847,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -11037,7 +11037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300004, guid: 557cc767631fc1d4ba851e8a99ea9628, type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: 46e3cb17c8ebaa44daf93571a9e38162, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 557cc767631fc1d4ba851e8a99ea9628, type: 3}
@@ -11259,8 +11259,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -11374,8 +11374,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -11483,8 +11483,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -11673,7 +11673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300004, guid: 557cc767631fc1d4ba851e8a99ea9628, type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: 46e3cb17c8ebaa44daf93571a9e38162, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 557cc767631fc1d4ba851e8a99ea9628, type: 3}
@@ -11931,8 +11931,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -12012,8 +12012,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &827738201
 GameObject:
   m_ObjectHideFlags: 0
@@ -12058,8 +12058,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -12167,8 +12167,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -12276,8 +12276,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -12482,8 +12482,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -12597,8 +12597,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -12706,8 +12706,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -12821,8 +12821,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -13033,8 +13033,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -13318,8 +13318,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -13413,8 +13413,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -13728,8 +13728,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -13931,8 +13931,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -14120,8 +14120,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -14435,8 +14435,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -14637,8 +14637,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -15316,8 +15316,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -15798,8 +15798,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -16000,8 +16000,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -16218,8 +16218,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -16535,8 +16535,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -16650,8 +16650,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -16765,8 +16765,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -17068,8 +17068,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -17258,7 +17258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: 9bb588823d8da76499558fe774532400, type: 3}
       propertyPath: m_Materials.Array.data[1]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: 585ca1818555719419f25c64adb85346, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bb588823d8da76499558fe774532400, type: 3}
@@ -17409,8 +17409,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -17504,22 +17504,22 @@ PrefabInstance:
     - target: {fileID: 4922044429361348441, guid: ea33e2976717be649bc7254e642627d0,
         type: 3}
       propertyPath: player
-      value: 
+      value:
       objectReference: {fileID: 1631072296}
     - target: {fileID: 4922044429361348441, guid: ea33e2976717be649bc7254e642627d0,
         type: 3}
       propertyPath: path.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 73513585}
     - target: {fileID: 4922044429361348441, guid: ea33e2976717be649bc7254e642627d0,
         type: 3}
       propertyPath: path.Array.data[1]
-      value: 
+      value:
       objectReference: {fileID: 1388909544}
     - target: {fileID: 4922044429361348441, guid: ea33e2976717be649bc7254e642627d0,
         type: 3}
       propertyPath: path.Array.data[2]
-      value: 
+      value:
       objectReference: {fileID: 36972524}
     - target: {fileID: 4922044429361348441, guid: ea33e2976717be649bc7254e642627d0,
         type: 3}
@@ -17633,8 +17633,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -17735,17 +17735,17 @@ PrefabInstance:
     - target: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
       propertyPath: player
-      value: 
+      value:
       objectReference: {fileID: 1631072296}
     - target: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
       propertyPath: path.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 297268203}
     - target: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
       propertyPath: path.Array.data[1]
-      value: 
+      value:
       objectReference: {fileID: 1929896924}
     - target: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
@@ -17755,42 +17755,42 @@ PrefabInstance:
     - target: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
       propertyPath: path.Array.data[2]
-      value: 
+      value:
       objectReference: {fileID: 36972524}
     - target: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
       propertyPath: gun
-      value: 
+      value:
       objectReference: {fileID: 1562177452}
     - target: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
       propertyPath: path.Array.data[3]
-      value: 
+      value:
       objectReference: {fileID: 297268203}
     - target: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
       propertyPath: path.Array.data[4]
-      value: 
+      value:
       objectReference: {fileID: 36972524}
     - target: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
       propertyPath: path.Array.data[5]
-      value: 
+      value:
       objectReference: {fileID: 153153342}
     - target: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
       propertyPath: path.Array.data[6]
-      value: 
+      value:
       objectReference: {fileID: 2089538309}
     - target: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
       propertyPath: path.Array.data[7]
-      value: 
+      value:
       objectReference: {fileID: 73513585}
     - target: {fileID: 4483567245810972084, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
       propertyPath: path.Array.data[8]
-      value: 
+      value:
       objectReference: {fileID: 1706959590}
     - target: {fileID: 8876228450648066187, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
@@ -17855,7 +17855,7 @@ PrefabInstance:
     - target: {fileID: 6497750740897206397, guid: 421e6d4453b619549b509a187ac96508,
         type: 3}
       propertyPath: m_Controller
-      value: 
+      value:
       objectReference: {fileID: 9100000, guid: f7ac774b583387547b59f21e85765528, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 421e6d4453b619549b509a187ac96508, type: 3}
@@ -18093,8 +18093,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -18356,8 +18356,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -18562,8 +18562,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -19144,8 +19144,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -19677,8 +19677,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -19879,8 +19879,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -19988,8 +19988,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -20069,8 +20069,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fa07142004acfd4d8682c17f67272ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   target: {fileID: 1631072297}
 --- !u!114 &1423108002
 MonoBehaviour:
@@ -20082,8 +20082,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2068120cd8bd30c4295f7b70d274d32e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   mapSize: 10
   divisions: 25
   position: {x: 0, y: 0, z: 0}
@@ -20117,22 +20117,22 @@ PrefabInstance:
     - target: {fileID: 4922044429361348441, guid: ea33e2976717be649bc7254e642627d0,
         type: 3}
       propertyPath: player
-      value: 
+      value:
       objectReference: {fileID: 1631072296}
     - target: {fileID: 4922044429361348441, guid: ea33e2976717be649bc7254e642627d0,
         type: 3}
       propertyPath: path.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 1388909544}
     - target: {fileID: 4922044429361348441, guid: ea33e2976717be649bc7254e642627d0,
         type: 3}
       propertyPath: path.Array.data[1]
-      value: 
+      value:
       objectReference: {fileID: 1706959590}
     - target: {fileID: 4922044429361348441, guid: ea33e2976717be649bc7254e642627d0,
         type: 3}
       propertyPath: path.Array.data[2]
-      value: 
+      value:
       objectReference: {fileID: 36972524}
     - target: {fileID: 4922044429361348441, guid: ea33e2976717be649bc7254e642627d0,
         type: 3}
@@ -20996,8 +20996,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -21362,8 +21362,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -21552,7 +21552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300004, guid: 557cc767631fc1d4ba851e8a99ea9628, type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: 46e3cb17c8ebaa44daf93571a9e38162, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 557cc767631fc1d4ba851e8a99ea9628, type: 3}
@@ -21996,7 +21996,7 @@ PrefabInstance:
     - target: {fileID: 7873074033456439677, guid: 7bbc44557af9e314694665533d265aff,
         type: 3}
       propertyPath: m_Avatar
-      value: 
+      value:
       objectReference: {fileID: 9000000, guid: 4c26077af8fd37e49b06c57a4e7937ef, type: 3}
     - target: {fileID: 5094257350908676183, guid: 7bbc44557af9e314694665533d265aff,
         type: 3}
@@ -22011,33 +22011,43 @@ PrefabInstance:
     - target: {fileID: 5094257350908676181, guid: 7bbc44557af9e314694665533d265aff,
         type: 3}
       propertyPath: Playerhealthtext
-      value: 
+      value:
       objectReference: {fileID: 370675491}
     - target: {fileID: 5094257350908676181, guid: 7bbc44557af9e314694665533d265aff,
         type: 3}
       propertyPath: itemText
-      value: 
+      value:
       objectReference: {fileID: 261908811}
     - target: {fileID: 5094257350908676181, guid: 7bbc44557af9e314694665533d265aff,
         type: 3}
       propertyPath: Briefcasetext
-      value: 
+      value:
       objectReference: {fileID: 807568870}
     - target: {fileID: 5094257350908676181, guid: 7bbc44557af9e314694665533d265aff,
         type: 3}
       propertyPath: spawnPointsTransform.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 5094257350908676181, guid: 7bbc44557af9e314694665533d265aff,
         type: 3}
       propertyPath: spawnPointsTransform.Array.data[1]
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 5094257350908676181, guid: 7bbc44557af9e314694665533d265aff,
         type: 3}
       propertyPath: spawnPointsTransform.Array.data[2]
-      value: 
+      value:
       objectReference: {fileID: 0}
+    - target: {fileID: 5094257350908676181, guid: 7bbc44557af9e314694665533d265aff,
+        type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873074033456439677, guid: 7bbc44557af9e314694665533d265aff,
+        type: 3}
+      propertyPath: m_Avatar
+      value:
+      objectReference: {fileID: 9000000, guid: 4c26077af8fd37e49b06c57a4e7937ef, type: 3}
     - target: {fileID: 4886715098912629180, guid: 7bbc44557af9e314694665533d265aff,
         type: 3}
       propertyPath: m_IsActive
@@ -22075,8 +22085,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de31da338b7761c4391f5ec20ed44d11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1001 &1641768690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22248,7 +22258,7 @@ PrefabInstance:
     - target: {fileID: 7179474861876746552, guid: ee333b5f8970fa44087f8632360b1c88,
         type: 3}
       propertyPath: player
-      value: 
+      value:
       objectReference: {fileID: 1631072296}
     - target: {fileID: 7179474861876746552, guid: ee333b5f8970fa44087f8632360b1c88,
         type: 3}
@@ -22396,8 +22406,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -22505,8 +22515,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -22907,8 +22917,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -23022,8 +23032,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -23222,8 +23232,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -23428,8 +23438,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -23616,8 +23626,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -23725,8 +23735,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -23834,8 +23844,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -24327,8 +24337,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -24436,8 +24446,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -24642,8 +24652,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -24751,8 +24761,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -24971,8 +24981,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -25080,8 +25090,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -25559,8 +25569,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -26044,8 +26054,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -26382,6 +26392,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1082729197981323388, guid: 14ce6c39a643d52409f55a818808633f,
+        type: 3}
+      propertyPath: m_Target
+      value:
+      objectReference: {fileID: 1631072297}
+    - target: {fileID: 1082729197981323388, guid: 14ce6c39a643d52409f55a818808633f,
+        type: 3}
+      propertyPath: m_TurnSpeed
+      value: 19.49
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14ce6c39a643d52409f55a818808633f, type: 3}
 --- !u!4 &2004561379 stripped
@@ -26661,8 +26681,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -27061,8 +27081,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -27176,8 +27196,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -27790,8 +27810,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -27988,8 +28008,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0
@@ -28313,8 +28333,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679c2ed9ea5a3e046ab5281077b242d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   tilePrefab: {fileID: 0}
   mapsize: {x: 0, y: 0, z: 0}
   outlinePercent: 0

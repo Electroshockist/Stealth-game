@@ -20,7 +20,7 @@ public abstract class Node {
 }
 
 
-public class AStar : MonoBehaviour {
+public class AStar {
     List<Node> visited = new List<Node>();
     List<Node> unvisited = new List<Node>();
 

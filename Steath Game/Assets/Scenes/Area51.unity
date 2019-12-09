@@ -21915,6 +21915,11 @@ PrefabInstance:
       propertyPath: spawnPointsTransform.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5094257350908676181, guid: 7bbc44557af9e314694665533d265aff,
+        type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7873074033456439677, guid: 7bbc44557af9e314694665533d265aff,
         type: 3}
       propertyPath: m_Avatar
@@ -26263,6 +26268,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082729197981323388, guid: 14ce6c39a643d52409f55a818808633f,
+        type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 1631072297}
+    - target: {fileID: 1082729197981323388, guid: 14ce6c39a643d52409f55a818808633f,
+        type: 3}
+      propertyPath: m_TurnSpeed
+      value: 19.49
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14ce6c39a643d52409f55a818808633f, type: 3}

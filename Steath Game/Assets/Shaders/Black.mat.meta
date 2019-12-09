@@ -1,14 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Steath Game/Assets/Area51/Background.meta
-guid: f626bfcb6c87d7e4caae84ec77bccec2
-folderAsset: yes
-DefaultImporter:
-=======
-guid: 46e3cb17c8ebaa44daf93571a9e38162
+guid: f8a7c4102cd3c5043a5e19aa981aa673
 NativeFormatImporter:
->>>>>>> Marco's-Branch:Steath Game/Assets/Shaders/Black.mat.meta
   externalObjects: {}
-  mainObjectFileID: 2100000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -10,6 +10,8 @@ TagManager:
   - itemMach
   - gun
   - Enemy
+  - Bullet
+  - EBullet
   layers:
   - Default
   - TransparentFX

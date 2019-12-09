@@ -4,6 +4,7 @@ using UnityEngine;
 //abstract node class for comparing any dataType
 public abstract class Node {
     protected abstract bool greaterThan(Node Node2);
+    protected abstract bool lessThan(Node Node2);
 
     public abstract List<Node> getNeighbours();
 
@@ -14,7 +15,7 @@ public abstract class Node {
     }
 
     public static bool operator <(Node n, Node n2) {
-        return !n.greaterThan(n2);
+        return n.lessThan(n2);
     }
 }
 

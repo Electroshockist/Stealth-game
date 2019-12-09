@@ -10,9 +10,8 @@ public class EnemyRandomMove : MonoBehaviour
     
     public List<GameObject> enemy;
     public int totalenemy = 10;
-    public GameObject[] pickups;
     public GameObject player;
-    public int enemyhealth = 1;
+    public int enemyhealth = 4;
     public Transform eyes;
     private NavMeshAgent agent;
     static Animator animate;
@@ -24,10 +23,10 @@ public class EnemyRandomMove : MonoBehaviour
 
     void Start()
     {
-
+        
         agent = GetComponent<NavMeshAgent>();
         animate = GetComponent<Animator>();
-        agent.speed = 10.2f;
+        agent.speed = 0.5f;
         animate.speed = 1.2f;
     }
 
@@ -37,16 +36,17 @@ public class EnemyRandomMove : MonoBehaviour
 
         RaycastHit rayHit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(eyes.position, fwd, Color.red);
+        Debug.DrawRay(eyes.position, fwd * 0.5f, Color.red);
 
-        if (Physics.Linecast(eyes.position, fwd * 20.0f, out rayHit))
+        if (Physics.Linecast(eyes.position, fwd * 0.5f, out rayHit))
         {
 
             if (rayHit.collider.gameObject.tag == "Player")
             {
                 state = "chase";
                 Debug.Log("chase");
-                agent.speed = 10.5f;
+                agent.SetDestination(player.transform.position);
+                agent.speed = 0.5f;
                 animate.SetBool("isWalking", true);
 
 
@@ -75,15 +75,16 @@ public class EnemyRandomMove : MonoBehaviour
  
     void Update()
 
-    {
+    {   CheckPlayerinsight();
 
         if (see == true)
         {
-            CheckPlayerinsight();
+         
         }
 
 
-      if (enemyhealth <= 0)
+
+        if (enemyhealth <= 0)
         {
             death();
         }
@@ -96,7 +97,7 @@ public class EnemyRandomMove : MonoBehaviour
             if (state == "idle")
             {
                 Debug.Log(state);
-                //walk randomly within 20f;
+                //walk randomly within 20f; 
                 Vector3 randomPos = Random.insideUnitSphere * awareness;
                 NavMeshHit navHit;
                 animate.SetBool("isWalking", true);
@@ -104,7 +105,7 @@ public class EnemyRandomMove : MonoBehaviour
                 NavMesh.SamplePosition(transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
 
 
-                // if enemy is alerted it will follow player tracks  (Breadcrumb)
+                // if enemy is alerted it will follow player tracks  
                 if (alert)
                 {
                     NavMesh.SamplePosition(player.transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
@@ -115,8 +116,8 @@ public class EnemyRandomMove : MonoBehaviour
                     if (awareness > 20f)
                     {
                         alert = false;
-                        agent.speed = 10.2f;
-                        animate.speed = 1.2f;
+                        agent.speed = 2.2f;
+                      
                         agent.SetDestination(navHit.position);
                         Debug.Log("im alert");
                     }
@@ -136,7 +137,7 @@ public class EnemyRandomMove : MonoBehaviour
                     state = "search";
                     wait = 5f;
                     Debug.Log("search");
-
+                    agent.speed = 0.2f;
                 }
             }
 
@@ -149,6 +150,7 @@ public class EnemyRandomMove : MonoBehaviour
                     animate.SetBool("isWalking", false);
                     wait -= Time.deltaTime;
                     transform.Rotate(0f, 120f * Time.deltaTime, 0f);
+                    agent.speed = 0.5f;
                 }
                 else
                 {
@@ -172,17 +174,19 @@ public class EnemyRandomMove : MonoBehaviour
                 print("Distance to other: " + distance);
 
                 //search
-                if (distance > 10f)
+                if (distance > 4f)
                 {
+                    agent.speed = 0.2f;
                     state = "somethingwrong";
                     Debug.Log("somethingwrong");
                 }
 
-              else  if (distance< 10)
+              else  if (distance< 1)
                 {
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)
                     {
+                        agent.speed = 0.7f;
                         agent.SetDestination(player.transform.position);
                         state = "kill";
                         Debug.Log("kill");
@@ -210,7 +214,7 @@ public class EnemyRandomMove : MonoBehaviour
                 float distance = Vector3.Distance(transform.position, player.transform.position);
                 print("Distance to other: " + distance);
                Vector3 enemyMove = Vector3.zero;
-
+                agent.speed = 1.0f;
                 if (distance > 1f)
                 {
                     if (enemypos.x > player.transform.position.x)
@@ -236,8 +240,8 @@ public class EnemyRandomMove : MonoBehaviour
                     {
                         animate.SetBool("isWalking", true);
                         state = "search";
-                   
-                        wait = 5f;
+                    agent.speed = 0.5f;
+                    wait = 5f;
                         alert = true;
                         awareness = 5f;
                 
@@ -253,10 +257,9 @@ public class EnemyRandomMove : MonoBehaviour
 
                 agent.SetDestination(player.transform.position);
 
-                animate.SetBool("isAttacking", true);
-                animate.SetBool("isWalking",false);
+          
 
-                animate.speed = 1f;
+                animate.speed = 2f;
                 
                 
                 // enemy loses player
@@ -264,21 +267,22 @@ public class EnemyRandomMove : MonoBehaviour
                 print("Distance to other: " + distance);
 
                 //search
-                if (distance > 12f)
+                if (distance > 2f)
                 {
                     animate.SetBool("isWalking", true);
-                    animate.SetBool("isAttacking", true);
+                    animate.SetBool("isAttacking", false);
                     state = "somethingwrong";
                     Debug.Log("somethingwrong");
                 }
 
-                else if (distance < 12)
+                else if (distance < 1.0f)
                 {
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)
                     {
-                        animate.SetBool("isWalking", false);
+                       
                         animate.SetBool("isAttacking", true);
+                        animate.SetBool("isWalking", false);
                         state = "kill";
                         Debug.Log("kill");
                     }
@@ -286,32 +290,25 @@ public class EnemyRandomMove : MonoBehaviour
                 }
 
             }
-            else 
-            {
-                animate.SetBool("isAttacking", false);
-            }
+        
         }
     }
 
     //die//
     public void death()
     {
+
+
+        animate.SetTrigger("Dead");
         animate.speed = 1f;
 
 
-        agent.gameObject.SetActive(false);
+        gameObject.SetActive(false);
 
-        enemy.Remove(gameObject);
-
-        totalenemy--;
-        Respawn();
-        animate.SetTrigger("Dead");
+   
+      
     }
 
 
-    //enemy respawn 
-    void Respawn()
-    {
-        totalenemy++;
-    }
+  
 }

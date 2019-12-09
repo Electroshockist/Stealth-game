@@ -15,7 +15,7 @@ public class PathFollowing : MonoBehaviour
     public GameObject gun;
 
     public Transform[] path;
-    private float speed = 1.0f;
+    private float speed = 0.5f;
     private int current = 0;
     private float disreached = 1.0f;
     public bool seeyou = false;
@@ -32,8 +32,7 @@ public class PathFollowing : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animate = GetComponent<Animator>();
-        agent.speed = 1.0f;
-        animate.speed = 1.2f;
+        agent.speed = 0.5f;
         //Bshoottime = starttimeshot;
         state = "idle";
     }
@@ -80,9 +79,9 @@ public class PathFollowing : MonoBehaviour
 
         RaycastHit rayHit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(eyes.position, fwd, Color.red);
+        Debug.DrawRay(eyes.position, fwd * 0.5f, Color.red);
 
-        if (Physics.Linecast(eyes.position, fwd * 6.0f, out rayHit))
+        if (Physics.Linecast(eyes.position, fwd * 0.5f, out rayHit))
         {
 
             if (rayHit.collider.gameObject.tag == "Player")
@@ -90,7 +89,7 @@ public class PathFollowing : MonoBehaviour
 
                 state = "chase";
                 Debug.Log("chase");
-                agent.speed = 1.0f;
+                agent.speed = 0.7f;
                 animate.SetBool("isWalking", true);
                 gun.gameObject.SetActive(true);
 
@@ -108,7 +107,11 @@ public class PathFollowing : MonoBehaviour
     {
 
         CheckPlayerinsight();
-  
+
+        if (badguyhealth <= 0)
+        {
+            death();
+        }
 
         if (player.GetComponent<Player>().alive)
         {
@@ -130,6 +133,7 @@ public class PathFollowing : MonoBehaviour
                     animate.SetBool("isWalking", true);
                     state = "search";
                     wait = 5f;
+                    speed = 0.5f;
                     Debug.Log("search");
                     gun.gameObject.SetActive(false);
 
@@ -146,6 +150,7 @@ public class PathFollowing : MonoBehaviour
                     wait -= Time.deltaTime;
                     transform.Rotate(0f, 120f * Time.deltaTime, 0f);
                     gun.gameObject.SetActive(true);
+                    speed = 0.5f;
                 }
                 else
                 {
@@ -170,13 +175,13 @@ public class PathFollowing : MonoBehaviour
                 print("Distance to other: " + distance);
                 gun.gameObject.SetActive(true);
                 //search
-                if (distance > 4f)
+                if (distance > 10f)
                 {
                     state = "idle";
                     gun.gameObject.SetActive(false);
                 }
 
-                else if (distance < 2)
+                else if (distance < 10)
                 {
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)
@@ -203,8 +208,8 @@ public class PathFollowing : MonoBehaviour
 
                
 
-                animate.speed = 1f;
-
+                animate.speed = 0.6f;
+              
 
                 // enemy loses player
                 float distance = Vector3.Distance(transform.position, player.transform.position);
@@ -252,6 +257,16 @@ public class PathFollowing : MonoBehaviour
 
     }
 
+    public void death()
+    {
+        animate.speed = 0f;
+
+
+        gameObject.SetActive(false); 
+
+      
+        animate.SetTrigger("Dead");
+    }
 
 
     void OnTriggerEnter(Collider other)
@@ -261,6 +276,7 @@ public class PathFollowing : MonoBehaviour
         {
             badguyhealth = badguyhealth - 1;
             Debug.Log("hit");
+            
         }
     }
 

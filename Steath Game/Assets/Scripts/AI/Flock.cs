@@ -4,47 +4,32 @@ using UnityEngine;
 
 public class Flock : MonoBehaviour
 {
-    public int maxBoids;
-    public GameObject boid;
-    //public GameObject[] boids;
-    List<GameObject> boids = new List<GameObject>();
+    public GameObject[] boids;
+    List<GameObject> boidsList = new List<GameObject>();
 
-    // obstacles
-    GameObject[] obstacles;
-    List<GameObject> obstacleList = new List<GameObject>();
-
-    // Use this for initialization
+    //Use this for initialization
     void Start()
     {
-        for (int i = 0; i < maxBoids; i++)
+        for (int i = 0; i < boids.Length; i++)
         {
-            boids.Add(Instantiate(boid, Vector3.zero, transform.rotation));
+            boidsList.Add(boids[i]);
         }
-
-        foreach (GameObject boid in boids)
-        {
-            boid.SetActive(true);
-            boid.GetComponent<Boid>().flock = this;
-        }
-
-        // obstacles
-        obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
-        obstacleList = new List<GameObject>(obstacles);
-        Debug.Log(obstacles.Length);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "Player")
+        {
+            for (int i = 0; i < boidsList.Capacity; i++)
+            {
+                boids[i].GetComponent<Boid>().flock = this;
+                boids[i].GetComponent<Boid>().StartFly();
+            }
+        }
     }
 
     public List<GameObject> GetBoids()
     {
-        return boids;
-    }
-
-    public List<GameObject> GetObstacles()
-    {
-        return obstacleList;
+        return boidsList;
     }
 }

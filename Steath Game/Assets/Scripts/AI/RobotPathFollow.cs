@@ -21,13 +21,13 @@ public class RobotPathFollow : MonoBehaviour
     public bool seeyou = false;
 
 
-
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animate = GetComponent<Animator>();
-        agent.speed = 2.0f;
-        animate.speed = 1.2f;
+        speed = 0.2f;
+         agent.speed = 1.0f;
+        animate.speed = 0.5f;
         //Bshoottime = starttimeshot;
         state = "idle";
     }
@@ -47,6 +47,7 @@ public class RobotPathFollow : MonoBehaviour
 
         if (dist <= disreached)
         {
+          
             current++;
         }
 
@@ -59,7 +60,7 @@ public class RobotPathFollow : MonoBehaviour
 
         animate.SetBool("isWalking", true);
         agent.SetDestination(path[current].transform.position);
-
+ 
 
         state = "Walk";
 
@@ -72,9 +73,9 @@ public class RobotPathFollow : MonoBehaviour
 
         RaycastHit rayHit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(eyes.position, fwd, Color.red);
+        Debug.DrawRay(eyes.position, fwd * 0.8f, Color.red);
 
-        if (Physics.Linecast(eyes.position, fwd * 2.0f, out rayHit))
+        if (Physics.Linecast(player.transform.position, fwd * 0.8f, out rayHit))
         {
 
             if (rayHit.collider.gameObject.tag == "Player")
@@ -82,9 +83,9 @@ public class RobotPathFollow : MonoBehaviour
 
                 state = "chase";
                 Debug.Log("chase");
-                agent.speed = 2.0f;
+                agent.speed = 0.5f;
                 animate.SetBool("isWalking", true);
-
+     
 
             }
 
@@ -101,7 +102,13 @@ public class RobotPathFollow : MonoBehaviour
 
         CheckPlayerinsight();
 
-
+        if (badguyhealth <= 0)
+        {
+            death();
+        }
+     
+       
+       
         if (player.GetComponent<Player>().alive)
         {
             animate.SetFloat("velocity", agent.velocity.magnitude);
@@ -121,7 +128,9 @@ public class RobotPathFollow : MonoBehaviour
                     animate.SetBool("isWalking", true);
                     state = "search";
                     wait = 5f;
+                    speed = 0.5f;
                     Debug.Log("search");
+                    agent.speed = 0.5f;
 
                 }
             }
@@ -160,6 +169,7 @@ public class RobotPathFollow : MonoBehaviour
                 //search
                 if (distance > 4f)
                 {
+                    agent.speed = 0.5f;
                     state = "idle";
                 }
 
@@ -168,6 +178,7 @@ public class RobotPathFollow : MonoBehaviour
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)
                     {
+                        agent.speed = 1.0f;
                         agent.SetDestination(player.transform.position);
                         state = "kill";
                         Debug.Log("kill");
@@ -187,10 +198,8 @@ public class RobotPathFollow : MonoBehaviour
 
                 agent.SetDestination(player.transform.position);
 
-                animate.SetBool("isAttacking", true);
-                animate.SetBool("isWalking", false);
 
-                animate.speed = 2.0f;
+                agent.speed = 1f;
 
 
                 // enemy loses player
@@ -198,14 +207,14 @@ public class RobotPathFollow : MonoBehaviour
                 print("Distance to other: " + distance);
 
                 //search
-                if (distance > 4f)
+                if (distance > 2f)
                 {
                     animate.SetBool("isWalking", true);
-                    animate.SetBool("isAttacking", true);
+                    animate.SetBool("isAttacking", false);
                     state = "idle";
                 }
 
-                else if (distance < 2)
+                else if (distance < 1)
                 {
                     //if player is alive kill them
                     if (player.GetComponent<Player>().alive)
@@ -221,14 +230,21 @@ public class RobotPathFollow : MonoBehaviour
                 }
 
             }
-            else
-            {
-                animate.SetBool("isAttacking", false);
-            }
+      
         }
 
     }
 
+    public void death()
+    {
+        agent.speed = 0.5f;
+
+
+        gameObject.SetActive(false);
+
+
+        animate.SetTrigger("Dead");
+    }
 
 
     void OnTriggerEnter(Collider other)

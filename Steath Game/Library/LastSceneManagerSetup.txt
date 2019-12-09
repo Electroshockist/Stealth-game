@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Area51.unity
+- path: Assets/Scenes/Museum.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

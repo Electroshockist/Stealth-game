@@ -77,11 +77,12 @@ public class EnemyRandomMove : MonoBehaviour
 
     {   CheckPlayerinsight();
 
-        if (see == true)
+        if (enemyhealth < 4)
         {
-         
-        }
 
+            state = "Run";
+
+        }
 
 
         if (enemyhealth <= 0)
@@ -98,11 +99,11 @@ public class EnemyRandomMove : MonoBehaviour
             {
                 Debug.Log(state);
                 //walk randomly within 20f; 
-                Vector3 randomPos = Random.insideUnitSphere * awareness;
+                Vector3 randomPos = Random.insideUnitSphere * awareness; //(Returns a random point inside a sphere with radius )
                 NavMeshHit navHit;
                 animate.SetBool("isWalking", true);
-                /// enemy finds random place wiith 20f to walk around on nav mesh 
-                NavMesh.SamplePosition(transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
+                /// enemy finds random place wiith 20f to walk around on nav mesh ()
+                NavMesh.SamplePosition(transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);//(Finds the closest point on NavMesh within specified range.)
 
 
                 // if enemy is alerted it will follow player tracks  
@@ -209,21 +210,23 @@ public class EnemyRandomMove : MonoBehaviour
             //edavde
             if (state == "Run")
             {
+                Debug.Log("run");
                 animate.SetBool("isWalking", true);
                 Vector3 enemypos = transform.position;
                 float distance = Vector3.Distance(transform.position, player.transform.position);
                 print("Distance to other: " + distance);
                Vector3 enemyMove = Vector3.zero;
                 agent.speed = 1.0f;
-                if (distance > 1f)
+                if (distance < 1f)
                 {
-                    if (enemypos.x > player.transform.position.x)
+                    if (enemypos.x < player.transform.position.x)
                     {
                         enemyMove.x *= 6;
                     }
 
+              
 
-                    if (enemypos.z > player.transform.position.z)
+                    if (enemypos.z < player.transform.position.z)
                     {
                         enemyMove.z *= 6;
                     }

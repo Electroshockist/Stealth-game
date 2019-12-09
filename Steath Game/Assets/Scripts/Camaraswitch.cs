@@ -30,7 +30,7 @@ public class Camaraswitch : MonoBehaviour
     void switchCam()
     {
       
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             camoneThird.SetActive((true));
             camaudio1.enabled = true;
@@ -41,7 +41,7 @@ public class Camaraswitch : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             camoneThird.SetActive((false));
             camaudio1.enabled = false;

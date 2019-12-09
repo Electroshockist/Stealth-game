@@ -110,17 +110,17 @@ public class Player : MonoBehaviour
             //anim.Play("WAIT00", -1, 0f);
         }
 
-        if (Input.GetKey(KeyCode.Q))
-        {
-            anim.SetBool("crouch", true);
-        }
-        else
-        {
-            anim.SetBool("crouch", false);
-        }
+        //if (Input.GetKey(KeyCode.A))
+        //{
+        //    anim.SetBool("crouch", true);
+        //}
+        //else
+        //{
+        //    anim.SetBool("crouch", false);
+        //}
 
 
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.Z))
         {
             anim.SetBool("run", true);
             speed = 1.5f;
@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
             speed = 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.J) && !bulletOut)
+        if (Input.GetKeyDown(KeyCode.X) && !bulletOut)
         {
             Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
             bulletOut = true;
@@ -167,7 +167,7 @@ public class Player : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown("u") && item > 0)
+        if (Input.GetKeyDown("v") && item > 0)
         {
 
             item = item - 1;
@@ -244,7 +244,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyUp("y") && other.gameObject.CompareTag("itemMach"))
+        if (Input.GetKeyUp("c") && other.gameObject.CompareTag("itemMach"))
         {
             Debug.Log("hit");
             int randomDrop = Random.Range(0, 3);

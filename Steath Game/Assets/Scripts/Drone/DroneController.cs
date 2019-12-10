@@ -5,6 +5,10 @@ using UnityEngine;
 public class DroneController : MonoBehaviour {
     public Transform target;
 
+    float elapsedTime = 0;
+
+    float updateTime = 10;
+
     SpacialPartition partition;
     AStar aStar = new AStar();
 
@@ -22,6 +26,7 @@ public class DroneController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        elapsedTime += Time.deltaTime;
         if(onPlayerMove()) {
             updatePath();
         }
@@ -29,7 +34,7 @@ public class DroneController : MonoBehaviour {
         //move();
     }
 
-    //void move() {
+    //void move(int i) {
     //    SpacialPartition.Node3D n = (SpacialPartition.Node3D)path[i];
 
     //    float distance = Vector3.Distance(transform.position, n.position);
@@ -41,15 +46,15 @@ public class DroneController : MonoBehaviour {
     IEnumerator test() {
         for(int i = 0; i < path.Count; i++) {
             SpacialPartition.Node3D n = (SpacialPartition.Node3D)path[i];
-            transform.position = n.position;
+            transform.position = new Vector3(n.position.x, n.position.y + 0.25f, n.position.z);
             yield return new WaitForSeconds(1);
         }
     }
 
     bool onPlayerMove() {
         return
-            Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) ||
-            Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow);
+            Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) ||
+            Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow);
     }
 
 
@@ -61,5 +66,7 @@ public class DroneController : MonoBehaviour {
         partition.addEnd(goal);
 
         path = aStar.Search(start, goal, partition.getNodes());
+
+        StartCoroutine(test());
     }
 }

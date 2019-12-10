@@ -76,43 +76,40 @@ public class SpacialPartition : MonoBehaviour {
         if(node == goal || node == start) {
             return getSpecialNeighbours(node);
         }
-
-        print("size: " + nodes.Count);
         for(int i = 0; i < nodes.Count; i++) {
-            print("size[i]: " + nodes[i].Count);
             for(int j = 0; j < nodes[i].Count; j++) {
-                print("size[i][j]: " + nodes[i][j].Count);
-                for(int k = 0; j < nodes[i][j].Count; k++) {
+                for(int k = 0; k < nodes[i][j].Count; k++) {
+                    print("iteration: " + i + ", " + j + ", " + k + " size: " + nodes[i][j].Count);
                     if(node == nodes[i][j][k]) {
                         List<Node> neighbours = new List<Node>();
                         Node3D neighbour = null;
 
-                        neighbour = nodes[i + 1][j][k];
+                        neighbour = getNode(i + 1, j, k);
                         if(neighbour != null) {
                             neighbours.Add(neighbour);
                         }
 
-                        neighbour = nodes[i][j + 1][k];
+                        neighbour = getNode(i, j + 1, k);
                         if(neighbour != null) {
                             neighbours.Add(neighbour);
                         }
 
-                        neighbour = nodes[i][j][k + 1];
+                        neighbour = getNode(i, j, k + 1);
                         if(neighbour != null) {
                             neighbours.Add(neighbour);
                         }
 
-                        neighbour = nodes[i - 1][j][k];
+                        neighbour = getNode(i - 1, j, k);
                         if(neighbour != null) {
                             neighbours.Add(neighbour);
                         }
 
-                        neighbour = nodes[i][j - 1][k];
+                        neighbour = getNode(i, j - 1, k);
                         if(neighbour != null) {
                             neighbours.Add(neighbour);
                         }
 
-                        neighbour = nodes[i][j][k - 1];
+                        neighbour = getNode(i, j, k - 1);
                         if(neighbour != null) {
                             neighbours.Add(neighbour);
                         }
@@ -160,6 +157,13 @@ public class SpacialPartition : MonoBehaviour {
             }
         }
         return nearestNode;
+    }
+
+    private Node3D getNode(int i, int j, int k) {
+        if(i < 0 || j < 0 || k < 0 || i >= nodes.Count || j >= nodes[i].Count || k >= nodes[i][j].Count) {
+            return null;
+        }
+        return nodes[i][j][k];
     }
 
     private List<Node> getSpecialNeighbours(Node3D node) {

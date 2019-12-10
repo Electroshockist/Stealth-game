@@ -20,7 +20,7 @@ public abstract class Node {
 }
 
 
-public class AStar : MonoBehaviour {
+public class AStar {
     List<Node> visited = new List<Node>();
     List<Node> unvisited = new List<Node>();
 
@@ -49,6 +49,9 @@ public class AStar : MonoBehaviour {
             }
 
             visited.Add(u);
+
+
+            MonoBehaviour.print(u);
 
             foreach(Node v in u.getNeighbours()) {
                 if(visited.Contains(v)) {

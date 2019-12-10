@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5300469395480681983}
   - component: {fileID: 4886348828643445036}
   - component: {fileID: 4246171621513831900}
+  - component: {fileID: 3672306515355777017}
   - component: {fileID: 3729718598795131225}
   m_Layer: 0
   m_Name: Drone
@@ -79,6 +80,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3672306515355777017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5167529195787049289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2068120cd8bd30c4295f7b70d274d32e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapSize: 10
+  divisions: 10
+  position: {x: 0, y: 0, z: 0}
 --- !u!114 &3729718598795131225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,3 +107,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa07142004acfd4d8682c17f67272ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}

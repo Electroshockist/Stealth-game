@@ -50,9 +50,6 @@ public class AStar {
 
             visited.Add(u);
 
-
-            MonoBehaviour.print(u);
-
             foreach(Node v in u.getNeighbours()) {
                 if(visited.Contains(v)) {
                     continue;

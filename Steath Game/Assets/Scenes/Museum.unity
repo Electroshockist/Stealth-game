@@ -20379,7 +20379,7 @@ PrefabInstance:
     - target: {fileID: 3672306515355777017, guid: d9be21dca0383974193fa68f75dd7ffe,
         type: 3}
       propertyPath: divisions
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3729718598795131225, guid: d9be21dca0383974193fa68f75dd7ffe,
         type: 3}

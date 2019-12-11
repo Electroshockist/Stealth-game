@@ -221,20 +221,20 @@ public class SpacialPartition : MonoBehaviour {
     }
 
     //uncomment if you want to see the generated nodes(extremely laggy)
-    //void OnDrawGizmosSelected() {
-    //    if(isBuilt) {
-    //        // Draw a yellow sphere at the transform's position
-    //        Gizmos.color = Color.yellow;
-    //        for(int i = 0; i < nodes.Count; i++) {
-    //            for(int j = 0; j < nodes[i].Count; j++) {
-    //                for(int k = 0; k < nodes[i][j].Count; k++) {
-    //                    if(nodes[i][j][k] != null) {
-    //                        Gizmos.DrawSphere(nodes[i][j][k].position, 0.01f);
-    //                    }
-    //                }
-    //            }
-    //        }
-    //    }
-    //}
+    void OnDrawGizmosSelected() {
+        if(isBuilt) {
+            // Draw a yellow sphere at the transform's position
+            Gizmos.color = Color.magenta;
+            for(int i = 0; i < nodes.Count; i++) {
+                for(int j = 0; j < nodes[i].Count; j++) {
+                    for(int k = 0; k < nodes[i][j].Count; k++) {
+                        if(nodes[i][j][k] != null) {
+                            Gizmos.DrawSphere(nodes[i][j][k].position, 0.01f);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
